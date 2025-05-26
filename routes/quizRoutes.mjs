@@ -1,12 +1,25 @@
 import express from 'express';
-import { getAllQuizzes, getQuizById } from '../controllers/quizController.mjs';
+import {
+  getAllQuizzes,
+  getQuizById,
+  createQuiz,
+  updateQuiz,
+  deleteQuiz,
+} from '../controllers/quizController.mjs';const router = express.Router();
 
-const router = express.Router();
+// GET /api/quizzes - fetch all quizzes with realm and questions
+router.get('/', getAllQuizzes);
 
-//GET all quizzes
-router.get('/', getAllQuizzes)
-
-//GET a single quiz by ID
+// GET /api/quizzes/:id - fetch quiz by ID
 router.get('/:id', getQuizById);
 
-export default router
+// POST /api/quizzes - create new quiz
+router.post('/', createQuiz);
+
+// PUT /api/quizzes/:id - update quiz by ID
+router.put('/:id', updateQuiz);
+
+// DELETE /api/quizzes/:id - delete quiz by ID
+router.delete('/:id', deleteQuiz);
+
+export default router;
