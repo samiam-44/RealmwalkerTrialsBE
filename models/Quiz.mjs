@@ -13,7 +13,7 @@ const quizSchema = new mongoose.Schema({
         required: true,
     },
     questions: [{ //Array of quiestion ObjectIds
-        types: mongoose.Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'Question', //question model
     }]
 });

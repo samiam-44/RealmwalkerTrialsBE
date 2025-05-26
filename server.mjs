@@ -5,7 +5,7 @@ import User from './models/User.mjs';
 
 //ROUTE IMPORTS
 import realmRoutes from './routes/realmRoutes.mjs'
-
+import quizRoutes from './routes/quizRoutes.mjs';
 //SETUP
 dotenv.config()
 const app = express()
@@ -17,7 +17,7 @@ connectDB()
 
 //REGISTER ROUTES
 app.use('/api/realms', realmRoutes);
-
+app.use('/api/quizzes', quizRoutes);
 // ROOT ROUTE
 app.get('/', (req, res) => {
   res.send('Hello from the Realms of Identity backend!');
@@ -31,6 +31,6 @@ app.use((err, _req, res, _next) => {
 
 //START SERVER LISTENER
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`)
+  console.log(`Server running on port ${PORT}`)
 })
- 
+
