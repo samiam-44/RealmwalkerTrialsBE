@@ -17,7 +17,7 @@ const questionSchema = new mongoose.Schema({
     //Possible answer choices
     options: [{
         text: String,
-        value: String 
+        value: String
     }]
 })
 

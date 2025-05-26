@@ -5,7 +5,7 @@ const resultSchema = new mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId, //Get user by id
         red: 'User',
-        required: true, 
+        required: true,
     },
     quiz: {
         type: mongoose.Schema.Types.ObjectId,
@@ -13,12 +13,12 @@ const resultSchema = new mongoose.Schema({
         required: true,
     },
     answers: [{ //Each answer is linked to a question
-       question: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Question',
-        required: true
-       },
-       selectedValue: String //possible option value like A or "Mind" etc.
+        question: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Question',
+            required: true
+        },
+        selectedValue: String //possible option value like A or "Mind" etc.
     }],
 
     outcome: { //Computed Result
@@ -26,9 +26,9 @@ const resultSchema = new mongoose.Schema({
         default: 'Pending'
     }
 },
- {
- timestamps: true //Add createdAt/updatedAt fields
-});
+    {
+        timestamps: true //Add createdAt/updatedAt fields
+    });
 
 const Result = mongoose.model('Result', resultSchema);
 export default Result
