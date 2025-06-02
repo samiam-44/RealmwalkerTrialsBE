@@ -40,11 +40,6 @@ const quizData = [
   },
   {
     realmName: 'Cipherhold',
-    title: 'Eysenck Core Index',
-    description: `Deep within Cipherhold’s neural database lies the Eysenck Index — a triadic analysis of your temperament. This test measures Psychoticism, Extraversion, and Neuroticism, offering insight into emotional stability, impulse control, and sociability. A foundational scan for operatives of Cipherhold.`,
-  },
-  {
-    realmName: 'Cipherhold',
     title: 'Temperament Archives',
     description: `From ancient scrolls of proto-psychology stored in Cipherhold’s Archive Node, the Four Temperaments remain encoded: Sanguine, Choleric, Melancholic, and Phlegmatic. This test, while ancient, still holds relevance — revealing the elemental forces behind your emotional and behavioral alchemy.`,
   },

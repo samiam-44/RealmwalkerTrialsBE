@@ -1512,7 +1512,1027 @@ const questionsData = [
       { text: "Strongly Agree", value: 1 }
     ]
   },
-  
+  //CALIPER ALIGNMENT CORE
+   {
+    quizTitle: "Caliper Alignment Core",
+    trait: "Assertiveness",
+    facet: "Confidence",
+    text: "I feel comfortable leading others and taking initiative.",
+    reverse: false,
+    options: [
+      { text: "Strongly Disagree", value: 1 },
+      { text: "Disagree", value: 2 },
+      { text: "Neutral", value: 3 },
+      { text: "Agree", value: 4 },
+      { text: "Strongly Agree", value: 5 }
+    ]
+  },
+  {
+    quizTitle: "Caliper Alignment Core",
+    trait: "Assertiveness",
+    facet: "Persuasiveness",
+    text: "I enjoy persuading others to see my point of view.",
+    reverse: false,
+    options: [
+      { text: "Strongly Disagree", value: 1 },
+      { text: "Disagree", value: 2 },
+      { text: "Neutral", value: 3 },
+      { text: "Agree", value: 4 },
+      { text: "Strongly Agree", value: 5 }
+    ]
+  },
+  {
+    quizTitle: "Caliper Alignment Core",
+    trait: "Assertiveness",
+    facet: "Dominance",
+    text: "I avoid taking charge even when I know the best course of action.",
+    reverse: true,
+    options: [
+      { text: "Strongly Disagree", value: 5 },
+      { text: "Disagree", value: 4 },
+      { text: "Neutral", value: 3 },
+      { text: "Agree", value: 2 },
+      { text: "Strongly Agree", value: 1 }
+    ]
+  },
+  {
+    quizTitle: "Caliper Alignment Core",
+    trait: "Urgency",
+    facet: "Drive",
+    text: "I work best when I have tight deadlines and pressure.",
+    reverse: false,
+    options: [
+      { text: "Strongly Disagree", value: 1 },
+      { text: "Disagree", value: 2 },
+      { text: "Neutral", value: 3 },
+      { text: "Agree", value: 4 },
+      { text: "Strongly Agree", value: 5 }
+    ]
+  },
+  {
+    quizTitle: "Caliper Alignment Core",
+    trait: "Urgency",
+    facet: "Impatience",
+    text: "I get frustrated when things move too slowly.",
+    reverse: false,
+    options: [
+      { text: "Strongly Disagree", value: 1 },
+      { text: "Disagree", value: 2 },
+      { text: "Neutral", value: 3 },
+      { text: "Agree", value: 4 },
+      { text: "Strongly Agree", value: 5 }
+    ]
+  },
+  {
+    quizTitle: "Caliper Alignment Core",
+    trait: "Urgency",
+    facet: "Restlessness",
+    text: "I feel uneasy when there’s nothing urgent to do.",
+    reverse: false,
+    options: [
+      { text: "Strongly Disagree", value: 1 },
+      { text: "Disagree", value: 2 },
+      { text: "Neutral", value: 3 },
+      { text: "Agree", value: 4 },
+      { text: "Strongly Agree", value: 5 }
+    ]
+  },
+  {
+    quizTitle: "Caliper Alignment Core",
+    trait: "Self-Discipline",
+    facet: "Consistency",
+    text: "I often have trouble sticking with my goals.",
+    reverse: true,
+    options: [
+      { text: "Strongly Disagree", value: 5 },
+      { text: "Disagree", value: 4 },
+      { text: "Neutral", value: 3 },
+      { text: "Agree", value: 2 },
+      { text: "Strongly Agree", value: 1 }
+    ]
+  },
+  {
+    quizTitle: "Caliper Alignment Core",
+    trait: "Self-Discipline",
+    facet: "Persistence",
+    text: "I usually finish tasks even when they are difficult or boring.",
+    reverse: false,
+    options: [
+      { text: "Strongly Disagree", value: 1 },
+      { text: "Disagree", value: 2 },
+      { text: "Neutral", value: 3 },
+      { text: "Agree", value: 4 },
+      { text: "Strongly Agree", value: 5 }
+    ]
+  },
+  {
+    quizTitle: "Caliper Alignment Core",
+    trait: "Self-Discipline",
+    facet: "Planning",
+    text: "I often jump into tasks without planning.",
+    reverse: true,
+    options: [
+      { text: "Strongly Disagree", value: 5 },
+      { text: "Disagree", value: 4 },
+      { text: "Neutral", value: 3 },
+      { text: "Agree", value: 2 },
+      { text: "Strongly Agree", value: 1 }
+    ]
+  },
+  {
+    quizTitle: "Caliper Alignment Core",
+    trait: "Thoroughness",
+    facet: "Detail Orientation",
+    text: "I carefully check over work for accuracy before submission.",
+    reverse: false,
+    options: [
+      { text: "Strongly Disagree", value: 1 },
+      { text: "Disagree", value: 2 },
+      { text: "Neutral", value: 3 },
+      { text: "Agree", value: 4 },
+      { text: "Strongly Agree", value: 5 }
+    ]
+  },
+   {
+    quizTitle: "Caliper Alignment Core",
+    trait: "Thoroughness",
+    facet: "Precision",
+    text: "I notice small errors or inconsistencies in data or text.",
+    reverse: false,
+    options: [
+      { text: "Strongly Disagree", value: 1 },
+      { text: "Disagree", value: 2 },
+      { text: "Neutral", value: 3 },
+      { text: "Agree", value: 4 },
+      { text: "Strongly Agree", value: 5 }
+    ]
+  },
+  {
+    quizTitle: "Caliper Alignment Core",
+    trait: "Thoroughness",
+    facet: "Responsibility",
+    text: "I feel a strong obligation to complete tasks accurately and thoroughly.",
+    reverse: false,
+    options: [
+      { text: "Strongly Disagree", value: 1 },
+      { text: "Disagree", value: 2 },
+      { text: "Neutral", value: 3 },
+      { text: "Agree", value: 4 },
+      { text: "Strongly Agree", value: 5 }
+    ]
+  },
+   {
+    quizTitle: "Caliper Alignment Core",
+    trait: "Openness",
+    facet: "Creativity",
+    text: "I often come up with innovative solutions to problems.",
+    reverse: false,
+    options: [
+      { text: "Strongly Disagree", value: 1 },
+      { text: "Disagree", value: 2 },
+      { text: "Neutral", value: 3 },
+      { text: "Agree", value: 4 },
+      { text: "Strongly Agree", value: 5 }
+    ]
+  },
+  {
+    quizTitle: "Caliper Alignment Core",
+    trait: "Openness",
+    facet: "Curiosity",
+    text: "I enjoy exploring new topics even if they’re unfamiliar to me.",
+    reverse: false,
+    options: [
+      { text: "Strongly Disagree", value: 1 },
+      { text: "Disagree", value: 2 },
+      { text: "Neutral", value: 3 },
+      { text: "Agree", value: 4 },
+      { text: "Strongly Agree", value: 5 }
+    ]
+  },
+  {
+    quizTitle: "Caliper Alignment Core",
+    trait: "Openness",
+    facet: "Flexibility",
+    text: "I resist changing my routines or viewpoints.",
+    reverse: true,
+    options: [
+      { text: "Strongly Disagree", value: 5 },
+      { text: "Disagree", value: 4 },
+      { text: "Neutral", value: 3 },
+      { text: "Agree", value: 2 },
+      { text: "Strongly Agree", value: 1 }
+    ]
+  },
+  {
+    quizTitle: "Caliper Alignment Core",
+    trait: "Skepticism",
+    facet: "Questioning",
+    text: "I rarely accept things at face value without questioning.",
+    reverse: false,
+    options: [
+      { text: "Strongly Disagree", value: 1 },
+      { text: "Disagree", value: 2 },
+      { text: "Neutral", value: 3 },
+      { text: "Agree", value: 4 },
+      { text: "Strongly Agree", value: 5 }
+    ]
+  },
+  {
+    quizTitle: "Caliper Alignment Core",
+    trait: "Skepticism",
+    facet: "Cynicism",
+    text: "I tend to be suspicious of others' motives.",
+    reverse: false,
+    options: [
+      { text: "Strongly Disagree", value: 1 },
+      { text: "Disagree", value: 2 },
+      { text: "Neutral", value: 3 },
+      { text: "Agree", value: 4 },
+      { text: "Strongly Agree", value: 5 }
+    ]
+  },
+  {
+    quizTitle: "Caliper Alignment Core",
+    trait: "Skepticism",
+    facet: "Guardedness",
+    text: "I am cautious when revealing personal information.",
+    reverse: false,
+    options: [
+      { text: "Strongly Disagree", value: 1 },
+      { text: "Disagree", value: 2 },
+      { text: "Neutral", value: 3 },
+      { text: "Agree", value: 4 },
+      { text: "Strongly Agree", value: 5 }
+    ]
+  },
+  {
+    quizTitle: "Caliper Alignment Core",
+    trait: "Risk-Taking",
+    facet: "Boldness",
+    text: "I enjoy taking big chances, even if the outcome is uncertain.",
+    reverse: false,
+    options: [
+      { text: "Strongly Disagree", value: 1 },
+      { text: "Disagree", value: 2 },
+      { text: "Neutral", value: 3 },
+      { text: "Agree", value: 4 },
+      { text: "Strongly Agree", value: 5 }
+    ]
+  },
+  {
+    quizTitle: "Caliper Alignment Core",
+    trait: "Risk-Taking",
+    facet: "Adventurousness",
+    text: "I actively seek out new and potentially risky experiences.",
+    reverse: false,
+    options: [
+      { text: "Strongly Disagree", value: 1 },
+      { text: "Disagree", value: 2 },
+      { text: "Neutral", value: 3 },
+      { text: "Agree", value: 4 },
+      { text: "Strongly Agree", value: 5 }
+    ]
+  },
+  {
+    quizTitle: "Caliper Alignment Core",
+    trait: "Risk-Taking",
+    facet: "Spontaneity",
+    text: "I often act on impulse without considering the consequences.",
+    reverse: true,
+    options: [
+      { text: "Strongly Disagree", value: 5 },
+      { text: "Disagree", value: 4 },
+      { text: "Neutral", value: 3 },
+      { text: "Agree", value: 2 },
+      { text: "Strongly Agree", value: 1 }
+    ]
+  },
+  {
+    quizTitle: "Caliper Alignment Core",
+    trait: "Empathy",
+    facet: "Compassion",
+    text: "I feel concerned for people who are less fortunate than me.",
+    reverse: false,
+    options: [
+      { text: "Strongly Disagree", value: 1 },
+      { text: "Disagree", value: 2 },
+      { text: "Neutral", value: 3 },
+      { text: "Agree", value: 4 },
+      { text: "Strongly Agree", value: 5 }
+    ]
+  },
+  {
+    quizTitle: "Caliper Alignment Core",
+    trait: "Empathy",
+    facet: "Understanding",
+    text: "I can easily put myself in someone else's shoes.",
+    reverse: false,
+    options: [
+      { text: "Strongly Disagree", value: 1 },
+      { text: "Disagree", value: 2 },
+      { text: "Neutral", value: 3 },
+      { text: "Agree", value: 4 },
+      { text: "Strongly Agree", value: 5 }
+    ]
+  },
+  {
+    quizTitle: "Caliper Alignment Core",
+    trait: "Empathy",
+    facet: "Sensitivity",
+    text: "I sometimes overlook how my words or actions affect others.",
+    reverse: true,
+    options: [
+      { text: "Strongly Disagree", value: 5 },
+      { text: "Disagree", value: 4 },
+      { text: "Neutral", value: 3 },
+      { text: "Agree", value: 2 },
+      { text: "Strongly Agree", value: 1 }
+    ]
+  },
+{
+  quizTitle: "Caliper Alignment Core",
+  trait: "Openness",
+  facet: "Creativity",
+  text: "I often come up with original and imaginative ideas.",
+  reverse: false,
+  options: [
+    { text: "Strongly Disagree", value: 1 },
+    { text: "Disagree", value: 2 },
+    { text: "Neutral", value: 3 },
+    { text: "Agree", value: 4 },
+    { text: "Strongly Agree", value: 5 }
+  ]
+},
+{
+  quizTitle: "Caliper Alignment Core",
+  trait: "Openness",
+  facet: "Flexibility",
+  text: "I am uncomfortable with unexpected changes in routine.",
+  reverse: true,
+  options: [
+    { text: "Strongly Disagree", value: 5 },
+    { text: "Disagree", value: 4 },
+    { text: "Neutral", value: 3 },
+    { text: "Agree", value: 2 },
+    { text: "Strongly Agree", value: 1 }
+  ]
+},
+{
+  quizTitle: "Caliper Alignment Core",
+  trait: "Skepticism",
+  facet: "Caution",
+  text: "I tend to question others’ motives before trusting them.",
+  reverse: false,
+  options: [
+    { text: "Strongly Disagree", value: 1 },
+    { text: "Disagree", value: 2 },
+    { text: "Neutral", value: 3 },
+    { text: "Agree", value: 4 },
+    { text: "Strongly Agree", value: 5 }
+  ]
+},
+{
+  quizTitle: "Caliper Alignment Core",
+  trait: "Skepticism",
+  facet: "Critical Thinking",
+  text: "I prefer to analyze all sides before accepting an idea.",
+  reverse: false,
+  options: [
+    { text: "Strongly Disagree", value: 1 },
+    { text: "Disagree", value: 2 },
+    { text: "Neutral", value: 3 },
+    { text: "Agree", value: 4 },
+    { text: "Strongly Agree", value: 5 }
+  ]
+},
+{
+  quizTitle: "Caliper Alignment Core",
+  trait: "Skepticism",
+  facet: "Distrust",
+  text: "I often assume people have hidden agendas.",
+  reverse: false,
+  options: [
+    { text: "Strongly Disagree", value: 1 },
+    { text: "Disagree", value: 2 },
+    { text: "Neutral", value: 3 },
+    { text: "Agree", value: 4 },
+    { text: "Strongly Agree", value: 5 }
+  ]
+},
+{
+  quizTitle: "Caliper Alignment Core",
+  trait: "Sociability",
+  facet: "Friendliness",
+  text: "I find it easy to make new friends.",
+  reverse: false,
+  options: [
+    { text: "Strongly Disagree", value: 1 },
+    { text: "Disagree", value: 2 },
+    { text: "Neutral", value: 3 },
+    { text: "Agree", value: 4 },
+    { text: "Strongly Agree", value: 5 }
+  ]
+},
+{
+  quizTitle: "Caliper Alignment Core",
+  trait: "Sociability",
+  facet: "Talkativeness",
+  text: "I often dominate conversations.",
+  reverse: false,
+  options: [
+    { text: "Strongly Disagree", value: 1 },
+    { text: "Disagree", value: 2 },
+    { text: "Neutral", value: 3 },
+    { text: "Agree", value: 4 },
+    { text: "Strongly Agree", value: 5 }
+  ]
+},
+{
+  quizTitle: "Caliper Alignment Core",
+  trait: "Sociability",
+  facet: "Outgoingness",
+  text: "I feel energized by social interaction.",
+  reverse: false,
+  options: [
+    { text: "Strongly Disagree", value: 1 },
+    { text: "Disagree", value: 2 },
+    { text: "Neutral", value: 3 },
+    { text: "Agree", value: 4 },
+    { text: "Strongly Agree", value: 5 }
+  ]
+},
+{
+  quizTitle: "Caliper Alignment Core",
+  trait: "Empathy",
+  facet: "Compassion",
+  text: "I often feel the emotions of others strongly.",
+  reverse: false,
+  options: [
+    { text: "Strongly Disagree", value: 1 },
+    { text: "Disagree", value: 2 },
+    { text: "Neutral", value: 3 },
+    { text: "Agree", value: 4 },
+    { text: "Strongly Agree", value: 5 }
+  ]
+},
+{
+  quizTitle: "Caliper Alignment Core",
+  trait: "Empathy",
+  facet: "Sensitivity",
+  text: "I tend to be deeply affected by criticism.",
+  reverse: false,
+  options: [
+    { text: "Strongly Disagree", value: 1 },
+    { text: "Disagree", value: 2 },
+    { text: "Neutral", value: 3 },
+    { text: "Agree", value: 4 },
+    { text: "Strongly Agree", value: 5 }
+  ]
+},
+{
+  quizTitle: "Caliper Alignment Core",
+  trait: "Empathy",
+  facet: "Supportiveness",
+  text: "I try to comfort people who are upset or anxious.",
+  reverse: false,
+  options: [
+    { text: "Strongly Disagree", value: 1 },
+    { text: "Disagree", value: 2 },
+    { text: "Neutral", value: 3 },
+    { text: "Agree", value: 4 },
+    { text: "Strongly Agree", value: 5 }
+  ]
+},
+{
+  quizTitle: "Caliper Alignment Core",
+  trait: "Assertiveness",
+  facet: "Initiative",
+  text: "I tend to take charge in group situations without being asked.",
+  reverse: false,
+  options: [
+    { text: "Strongly Disagree", value: 1 },
+    { text: "Disagree", value: 2 },
+    { text: "Neutral", value: 3 },
+    { text: "Agree", value: 4 },
+    { text: "Strongly Agree", value: 5 }
+  ]
+},
+{
+  quizTitle: "Caliper Alignment Core",
+  trait: "Urgency",
+  facet: "Energetic Pace",
+  text: "I prefer to complete tasks quickly rather than slowly and carefully.",
+  reverse: false,
+  options: [
+    { text: "Strongly Disagree", value: 1 },
+    { text: "Disagree", value: 2 },
+    { text: "Neutral", value: 3 },
+    { text: "Agree", value: 4 },
+    { text: "Strongly Agree", value: 5 }
+  ]
+},
+{
+  quizTitle: "Caliper Alignment Core",
+  trait: "Self-Discipline",
+  facet: "Goal Setting",
+  text: "I regularly set clear goals and work steadily toward them.",
+  reverse: false,
+  options: [
+    { text: "Strongly Disagree", value: 1 },
+    { text: "Disagree", value: 2 },
+    { text: "Neutral", value: 3 },
+    { text: "Agree", value: 4 },
+    { text: "Strongly Agree", value: 5 }
+  ]
+},
+{
+  quizTitle: "Caliper Alignment Core",
+  trait: "Thoroughness",
+  facet: "Accuracy",
+  text: "I double-check my work to avoid careless mistakes.",
+  reverse: false,
+  options: [
+    { text: "Strongly Disagree", value: 1 },
+    { text: "Disagree", value: 2 },
+    { text: "Neutral", value: 3 },
+    { text: "Agree", value: 4 },
+    { text: "Strongly Agree", value: 5 }
+  ]
+},
+{
+  quizTitle: "Caliper Alignment Core",
+  trait: "Openness",
+  facet: "Adaptability",
+  text: "I adjust easily to unexpected changes in plans or routines.",
+  reverse: false,
+  options: [
+    { text: "Strongly Disagree", value: 1 },
+    { text: "Disagree", value: 2 },
+    { text: "Neutral", value: 3 },
+    { text: "Agree", value: 4 },
+    { text: "Strongly Agree", value: 5 }
+  ]
+},
+{
+  quizTitle: "Caliper Alignment Core",
+  trait: "Skepticism",
+  facet: "Doubt",
+  text: "I sometimes question my own beliefs or assumptions.",
+  reverse: false,
+  options: [
+    { text: "Strongly Disagree", value: 1 },
+    { text: "Disagree", value: 2 },
+    { text: "Neutral", value: 3 },
+    { text: "Agree", value: 4 },
+    { text: "Strongly Agree", value: 5 }
+  ]
+},
+{
+  quizTitle: "Caliper Alignment Core",
+  trait: "Risk-Taking",
+  facet: "Cautiousness",
+  text: "I avoid taking risks unless I am certain of the outcome.",
+  reverse: true,
+  options: [
+    { text: "Strongly Disagree", value: 5 },
+    { text: "Disagree", value: 4 },
+    { text: "Neutral", value: 3 },
+    { text: "Agree", value: 2 },
+    { text: "Strongly Agree", value: 1 }
+  ]
+},
+{
+  quizTitle: "Caliper Alignment Core",
+  trait: "Empathy",
+  facet: "Listening",
+  text: "I listen carefully to others’ feelings and perspectives.",
+  reverse: false,
+  options: [
+    { text: "Strongly Disagree", value: 1 },
+    { text: "Disagree", value: 2 },
+    { text: "Neutral", value: 3 },
+    { text: "Agree", value: 4 },
+    { text: "Strongly Agree", value: 5 }
+  ]
+},
+{
+  quizTitle: "Caliper Alignment Core",
+  trait: "Empathy",
+  facet: "Supportiveness",
+  text: "I offer help to people who are struggling without being asked.",
+  reverse: false,
+  options: [
+    { text: "Strongly Disagree", value: 1 },
+    { text: "Disagree", value: 2 },
+    { text: "Neutral", value: 3 },
+    { text: "Agree", value: 4 },
+    { text: "Strongly Agree", value: 5 }
+  ]
+},
+//DISC ------------------------------------------------------
+
+ {
+    quizTitle: "DISC Signal Frequencies",
+    text: "I am most satisfied when:",
+    options: [
+      { text: "I achieve big goals", type: "D" },
+      { text: "I connect meaningfully with others", type: "I" },
+      { text: "I provide support and stability", type: "S" },
+      { text: "I complete work thoroughly and accurately", type: "C" }
+    ]
+  },
+  {
+    quizTitle: "DISC Signal Frequencies",
+    text: "When working in a team, I usually:",
+    options: [
+      { text: "Take charge and set the direction", type: "D" },
+      { text: "Encourage and motivate others", type: "I" },
+      { text: "Help keep harmony and support", type: "S" },
+      { text: "Focus on details and quality", type: "C" }
+    ]
+  },
+  {
+    quizTitle: "DISC Signal Frequencies",
+    text: "I tend to make decisions based on:",
+    options: [
+      { text: "What will get results fastest", type: "D" },
+      { text: "How it affects people emotionally", type: "I" },
+      { text: "Keeping everyone comfortable", type: "S" },
+      { text: "Following facts and data precisely", type: "C" }
+    ]
+  },
+  {
+    quizTitle: "DISC Signal Frequencies",
+    text: "In stressful situations, I usually:",
+    options: [
+      { text: "Push harder to overcome challenges", type: "D" },
+      { text: "Seek social support and talk it out", type: "I" },
+      { text: "Stay calm and try to maintain stability", type: "S" },
+      { text: "Analyze all details carefully", type: "C" }
+    ]
+  },
+  {
+    quizTitle: "DISC Signal Frequencies",
+    text: "I am most energized when:",
+    options: [
+      { text: "I am leading and making quick decisions", type: "D" },
+      { text: "I am socializing and inspiring others", type: "I" },
+      { text: "I am helping others and building trust", type: "S" },
+      { text: "I am organizing and perfecting tasks", type: "C" }
+    ]
+  },
+  {
+    quizTitle: "DISC Signal Frequencies",
+    text: "When approaching new tasks, I prefer to:",
+    options: [
+      { text: "Jump right in and take control", type: "D" },
+      { text: "Get input and build enthusiasm", type: "I" },
+      { text: "Follow established procedures", type: "S" },
+      { text: "Plan carefully before acting", type: "C" }
+    ]
+  },
+  {
+    quizTitle: "DISC Signal Frequencies",
+    text: "Others describe me as:",
+    options: [
+      { text: "Assertive and determined", type: "D" },
+      { text: "Friendly and persuasive", type: "I" },
+      { text: "Dependable and patient", type: "S" },
+      { text: "Precise and analytical", type: "C" }
+    ]
+  },
+  {
+    quizTitle: "DISC Signal Frequencies",
+    text: "I handle conflict by:",
+    options: [
+      { text: "Confronting the problem directly", type: "D" },
+      { text: "Trying to smooth things over with communication", type: "I" },
+      { text: "Avoiding confrontation and seeking peace", type: "S" },
+      { text: "Analyzing causes and finding logical solutions", type: "C" }
+    ]
+  },
+  {
+    quizTitle: "DISC Signal Frequencies",
+    text: "I prefer to be recognized for:",
+    options: [
+      { text: "My leadership and results", type: "D" },
+      { text: "My enthusiasm and charm", type: "I" },
+      { text: "My loyalty and helpfulness", type: "S" },
+      { text: "My accuracy and knowledge", type: "C" }
+    ]
+  },
+  {
+    quizTitle: "DISC Signal Frequencies",
+    text: "When under pressure, I:",
+    options: [
+      { text: "Take quick action to regain control", type: "D" },
+      { text: "Reach out for social support", type: "I" },
+      { text: "Stay calm and patient", type: "S" },
+      { text: "Focus on details and facts", type: "C" }
+    ]
+  },
+  {
+    quizTitle: "DISC Signal Frequencies",
+    text: "My work style is best described as:",
+    options: [
+      { text: "Competitive and goal-oriented", type: "D" },
+      { text: "Collaborative and persuasive", type: "I" },
+      { text: "Consistent and supportive", type: "S" },
+      { text: "Systematic and precise", type: "C" }
+    ]
+  },
+  {
+    quizTitle: "DISC Signal Frequencies",
+    text: "When I want to influence others, I:",
+    options: [
+      { text: "Use logic and data", type: "C" },
+      { text: "Use charm and enthusiasm", type: "I" },
+      { text: "Show confidence and assertiveness", type: "D" },
+      { text: "Demonstrate reliability and patience", type: "S" }
+    ]
+  },
+  {
+    quizTitle: "DISC Signal Frequencies",
+    text: "I get frustrated when:",
+    options: [
+      { text: "People waste time and avoid decisions", type: "D" },
+      { text: "People are cold or unresponsive", type: "I" },
+      { text: "People are pushy or impatient", type: "S" },
+      { text: "People are careless or inaccurate", type: "C" }
+    ]
+  },
+  {
+    quizTitle: "DISC Signal Frequencies",
+    text: "I prefer environments that are:",
+    options: [
+      { text: "Fast-paced and challenging", type: "D" },
+      { text: "Friendly and social", type: "I" },
+      { text: "Stable and predictable", type: "S" },
+      { text: "Organized and detail-oriented", type: "C" }
+    ]
+  },
+  {
+    quizTitle: "DISC Signal Frequencies",
+    text: "My communication style is:",
+    options: [
+      { text: "Direct and to the point", type: "D" },
+      { text: "Expressive and animated", type: "I" },
+      { text: "Patient and attentive", type: "S" },
+      { text: "Careful and methodical", type: "C" }
+    ]
+  },
+  {
+    quizTitle: "DISC Signal Frequencies",
+    text: "I am motivated by:",
+    options: [
+      { text: "Winning and success", type: "D" },
+      { text: "Recognition and social approval", type: "I" },
+      { text: "Security and belonging", type: "S" },
+      { text: "Accuracy and expertise", type: "C" }
+    ]
+  },
+  {
+    quizTitle: "DISC Signal Frequencies",
+    text: "I handle change by:",
+    options: [
+      { text: "Taking charge and adapting quickly", type: "D" },
+      { text: "Getting others excited about the change", type: "I" },
+      { text: "Helping others adjust patiently", type: "S" },
+      { text: "Analyzing the details before proceeding", type: "C" }
+    ]
+  },
+  {
+    quizTitle: "DISC Signal Frequencies",
+    text: "When I set goals, I:",
+    options: [
+      { text: "Set challenging targets and push hard", type: "D" },
+      { text: "Set social and inspiring goals", type: "I" },
+      { text: "Set realistic and steady goals", type: "S" },
+      { text: "Set detailed and measurable goals", type: "C" }
+    ]
+  },
+  {
+    quizTitle: "DISC Signal Frequencies",
+    text: "I prefer to be recognized for my:",
+    options: [
+      { text: "Leadership and drive", type: "D" },
+      { text: "Charisma and friendliness", type: "I" },
+      { text: "Loyalty and kindness", type: "S" },
+      { text: "Precision and knowledge", type: "C" }
+    ]
+  },
+  {
+    quizTitle: "DISC Signal Frequencies",
+    text: "In a group, I am often the one who:",
+    options: [
+      { text: "Takes the lead and pushes results", type: "D" },
+      { text: "Engages and energizes the group", type: "I" },
+      { text: "Keeps peace and supports others", type: "S" },
+      { text: "Provides structure and quality control", type: "C" }
+    ]
+  },
+  //TEMPERMENT ARCHIVES
+  {
+    quizTitle: "Temperament Archives",
+    text: "When faced with a new project, I usually:",
+    options: [
+      { text: "Get excited and rally others to join me", type: "Sanguine" },
+      { text: "Take control and set clear goals", type: "Choleric" },
+      { text: "Plan carefully and analyze every detail", type: "Melancholic" },
+      { text: "Prefer to support quietly and keep things steady", type: "Phlegmatic" }
+    ]
+  },
+  {
+    quizTitle: "Temperament Archives",
+    text: "In social gatherings, I tend to:",
+    options: [
+      { text: "Be the center of attention and tell stories", type: "Sanguine" },
+      { text: "Lead conversations and organize activities", type: "Choleric" },
+      { text: "Observe quietly and reflect on the people", type: "Melancholic" },
+      { text: "Enjoy listening and making others feel comfortable", type: "Phlegmatic" }
+    ]
+  },
+  {
+    quizTitle: "Temperament Archives",
+    text: "When making decisions, I rely mostly on:",
+    options: [
+      { text: "My intuition and enthusiasm", type: "Sanguine" },
+      { text: "My logic and determination", type: "Choleric" },
+      { text: "My careful analysis and facts", type: "Melancholic" },
+      { text: "My calmness and desire for harmony", type: "Phlegmatic" }
+    ]
+  },
+  {
+    quizTitle: "Temperament Archives",
+    text: "I handle conflict by:",
+    options: [
+      { text: "Trying to lighten the mood and move on", type: "Sanguine" },
+      { text: "Confronting it directly and finding a solution", type: "Choleric" },
+      { text: "Thinking deeply before responding", type: "Melancholic" },
+      { text: "Avoiding it and seeking peace", type: "Phlegmatic" }
+    ]
+  },
+  {
+    quizTitle: "Temperament Archives",
+    text: "My work style is best described as:",
+    options: [
+      { text: "Flexible and spontaneous", type: "Sanguine" },
+      { text: "Focused and goal-oriented", type: "Choleric" },
+      { text: "Meticulous and organized", type: "Melancholic" },
+      { text: "Consistent and dependable", type: "Phlegmatic" }
+    ]
+  },
+  {
+    quizTitle: "Temperament Archives",
+    text: "When stressed, I tend to:",
+    options: [
+      { text: "Seek social support and distraction", type: "Sanguine" },
+      { text: "Become impatient and assertive", type: "Choleric" },
+      { text: "Withdraw and worry", type: "Melancholic" },
+      { text: "Become passive and avoid problems", type: "Phlegmatic" }
+    ]
+  },
+  {
+    quizTitle: "Temperament Archives",
+    text: "My communication style is:",
+    options: [
+      { text: "Warm and expressive", type: "Sanguine" },
+      { text: "Direct and commanding", type: "Choleric" },
+      { text: "Careful and precise", type: "Melancholic" },
+      { text: "Gentle and calm", type: "Phlegmatic" }
+    ]
+  },
+  {
+    quizTitle: "Temperament Archives",
+    text: "I am motivated most by:",
+    options: [
+      { text: "Fun and social connection", type: "Sanguine" },
+      { text: "Achievement and challenge", type: "Choleric" },
+      { text: "Perfection and meaning", type: "Melancholic" },
+      { text: "Stability and peace", type: "Phlegmatic" }
+    ]
+  },
+  {
+    quizTitle: "Temperament Archives",
+    text: "In a team, I usually:",
+    options: [
+      { text: "Bring energy and enthusiasm", type: "Sanguine" },
+      { text: "Take the lead and make decisions", type: "Choleric" },
+      { text: "Provide detailed planning and quality control", type: "Melancholic" },
+      { text: "Support others and keep harmony", type: "Phlegmatic" }
+    ]
+  },
+  {
+    quizTitle: "Temperament Archives",
+    text: "I feel most comfortable when:",
+    options: [
+      { text: "Surrounded by friends and laughter", type: "Sanguine" },
+      { text: "In control of my goals and progress", type: "Choleric" },
+      { text: "In a quiet and orderly environment", type: "Melancholic" },
+      { text: "In a calm, supportive setting", type: "Phlegmatic" }
+    ]
+  },
+  {
+    quizTitle: "Temperament Archives",
+    text: "When learning new things, I prefer:",
+    options: [
+      { text: "Group discussions and interactive activities", type: "Sanguine" },
+      { text: "Challenging tasks that test my skills", type: "Choleric" },
+      { text: "Thorough research and reflection", type: "Melancholic" },
+      { text: "Step-by-step guidance and patience", type: "Phlegmatic" }
+    ]
+  },
+  {
+    quizTitle: "Temperament Archives",
+    text: "My friends describe me as:",
+    options: [
+      { text: "Fun-loving and outgoing", type: "Sanguine" },
+      { text: "Driven and determined", type: "Choleric" },
+      { text: "Thoughtful and serious", type: "Melancholic" },
+      { text: "Loyal and dependable", type: "Phlegmatic" }
+    ]
+  },
+  {
+    quizTitle: "Temperament Archives",
+    text: "When faced with criticism, I tend to:",
+    options: [
+      { text: "Brush it off quickly and move on", type: "Sanguine" },
+      { text: "Defend my position firmly", type: "Choleric" },
+      { text: "Take it to heart and reflect deeply", type: "Melancholic" },
+      { text: "Try to keep peace and avoid confrontation", type: "Phlegmatic" }
+    ]
+  },
+  {
+    quizTitle: "Temperament Archives",
+    text: "I recharge best by:",
+    options: [
+      { text: "Spending time with friends and having fun", type: "Sanguine" },
+      { text: "Working towards a new goal or project", type: "Choleric" },
+      { text: "Having quiet time alone to think", type: "Melancholic" },
+      { text: "Relaxing in a calm, familiar environment", type: "Phlegmatic" }
+    ]
+  },
+  {
+    quizTitle: "Temperament Archives",
+    text: "My ideal work environment is:",
+    options: [
+      { text: "Dynamic and social", type: "Sanguine" },
+      { text: "Fast-paced and challenging", type: "Choleric" },
+      { text: "Structured and detailed", type: "Melancholic" },
+      { text: "Stable and supportive", type: "Phlegmatic" }
+    ]
+  },
+  {
+    quizTitle: "Temperament Archives",
+    text: "When solving problems, I tend to:",
+    options: [
+      { text: "Brainstorm with others and think creatively", type: "Sanguine" },
+      { text: "Take charge and find quick solutions", type: "Choleric" },
+      { text: "Analyze all the details carefully", type: "Melancholic" },
+      { text: "Look for peaceful, compromise solutions", type: "Phlegmatic" }
+    ]
+  },
+  {
+    quizTitle: "Temperament Archives",
+    text: "I express my emotions by:",
+    options: [
+      { text: "Being lively and openly expressive", type: "Sanguine" },
+      { text: "Being direct and assertive", type: "Choleric" },
+      { text: "Being reserved and thoughtful", type: "Melancholic" },
+      { text: "Being calm and steady", type: "Phlegmatic" }
+    ]
+  },
+  {
+    quizTitle: "Temperament Archives",
+    text: "My main strength is:",
+    options: [
+      { text: "Making friends easily", type: "Sanguine" },
+      { text: "Leading and motivating others", type: "Choleric" },
+      { text: "Being detail-oriented and responsible", type: "Melancholic" },
+      { text: "Being reliable and supportive", type: "Phlegmatic" }
+    ]
+  },
+  {
+    quizTitle: "Temperament Archives",
+    text: "When working under pressure, I:",
+    options: [
+      { text: "Stay energetic and optimistic", type: "Sanguine" },
+      { text: "Focus on tasks and push forward", type: "Choleric" },
+      { text: "Become serious and careful", type: "Melancholic" },
+      { text: "Stay calm and steady", type: "Phlegmatic" }
+    ]
+  },
+  {
+    quizTitle: "Temperament Archives",
+    text: "I feel happiest when:",
+    options: [
+      { text: "Surrounded by people and fun activities", type: "Sanguine" },
+      { text: "Achieving important goals", type: "Choleric" },
+      { text: "Creating something meaningful and perfect", type: "Melancholic" },
+      { text: "Enjoying peace and quiet", type: "Phlegmatic" }
+    ]
+  },
+
 
 ];
 
