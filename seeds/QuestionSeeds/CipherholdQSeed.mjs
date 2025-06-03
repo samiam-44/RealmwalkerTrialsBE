@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 import Question from './models/Question.mjs';
 import Quiz from './models/Quiz.mjs';
 
-const questionsData = [
+const CipherholdQuestions = [
   //MEYER BRIGGS TEST
   {
     quizTitle: "Myers-Briggs Codex (MBTI)",
@@ -3050,23 +3050,25 @@ const questionsData = [
 
 async function seedQuestions() {
   try {
-    await mongoose.connect('mongodb://localhost:27017/your-db-name');
+    await mongoose.connect('mongodb://localhost:27017/TheRealmwalkerTrials');
 
-    for (const q of questionsData) {
+    for (const q of CipherholdQuestions) {
+      //Find quiz by title and get its _id reference
       const quiz = await Quiz.findOne({ title: q.quizTitle });
       if (!quiz) {
         console.warn(`Quiz not found: ${q.quizTitle}`);
         continue;
       }
+      //Create question linked to the quiz
+        const { quizTitle, ...questionData } = q;
 
       await Question.create({
-        text: q.text,
-        options: q.options,
+        ...questionData,
         quiz: quiz._id,
       });
     }
 
-    console.log('Questions seeded!');
+    console.log('Cipherhold questions seeded!');
     mongoose.disconnect();
   } catch (err) {
     console.error(err);

@@ -137,60 +137,72 @@ const quizData = [
 
 
   //THE DREAMLINK CHANNEL QUIZZES
- { title: "The Sorting Scrolls",
-      description: `Drawn from the magical halls of Hogwarts, the Sorting Scrolls channel the enchanted Hat’s insight to place you where you belong — brave Gryffindor, wise Ravenclaw, loyal Hufflepuff, or cunning Slytherin. Your values, instincts, and ambitions will reveal your true magical kin. (Hogwarts House Test)`,
-      questions: []
-    },
-    {
-      title: "The Divergent Divide",
-      description: `Step into the fractured society of post-apocalyptic Chicago. Will you choose selflessness, bravery, honesty, intelligence, or peace? This Divergent trial examines your worldview to align you with one of five factions — Abnegation, Dauntless, Candor, Erudite, or Amity — or reveal if you're Divergent. (Divergent Faction Alignment)`,
-      questions: []
-    },
-    {
-      title: "The Races of Arda",
-      description: `From the fires of Mount Doom to the woods of Lothlórien, the lands of Middle-earth call to you. Are you a wise Elf, stalwart Dwarf, noble Man, curious Hobbit, or something older and more mysterious? This mythic reading places you among Tolkien’s legendary peoples based on spirit, strength, and heart. (Lord of the Rings Identity)`,
-      questions: []
-    },
-    {
-      title: "The Bending Pathways",
-      description: `Water. Earth. Fire. Air. Long ago, the four nations lived in harmony… Which element calls to your soul? The Bending Pathways journey reveals your elemental nature based on temperament, balance, and inner will. Are you a Firebender, Earthbender, Waterbender, Airbender — or something beyond? (Avatar: The Last Airbender Element Test)`,
-      questions: []
-    },
-    {
-      title: "The Capitol Index",
-      description: `The Capitol watches. The Districts endure. Where would you rise from in Panem’s fractured world? This immersive reading places you in one of the 13 Districts — from the coal-rich shadows of District 12 to the rebel secrets of District 13 — based on your survival instincts, traits, and drive. (Hunger Games District Test)`,
-      questions: []
-    },
-    {
-      title: "The Jedi or the Sith?",
-      description: `A long time ago in a galaxy far, far away... the Force flows through all living things, but which side do you walk? This Star Wars transmission unveils your moral resonance — Jedi, Sith, or Gray — by exploring your instincts toward peace, power, or balance. (Star Wars Alignment Test)`,
-      questions: []
-    },
-    {
-      title: "The Elder Scrolls Sigil",
-      description: `Born under a sign, shaped by war and wonder — what race and guild does your soul claim in the world of Tamriel? Are you a Nord warrior, Khajiit thief, Altmer mage, or something more elusive? Let the winds of Skyrim guide your destiny. (Skyrim Race & Guild Affinity)`,
-      questions: []
-    },
-    {
-      title: "The Inner Pantheon",
-      description: `High upon Mount Olympus, ancient powers still stir. Are you a strategic Athena, passionate Aphrodite, wild Artemis, or thunderous Zeus? This divine alignment reveals the mythic energy within — the Olympian archetype that reflects your spirit. (Greek God Archetype)`,
-      questions: []
-    },
-    {
-      title: "The Feywild Compass",
-      description: `Before you were forged in flesh, your essence flickered in the Feywilds and Forgotten Realms. This arcane reflection channels your energy into one of Dungeons & Dragons’ legendary lineages — Elf, Tiefling, Dragonborn, Gnome, and more — while unearthing your soul’s backstory. (D&D Race & Origin Test)`,
-      questions: []
-    },
-    {
-      title: "The Echoes of Alignment",
-      description: `From the fractured mirror of myth, your moral compass emerges. Are you Lawful Good, Chaotic Neutral, or something more complex? This classic journey maps your ethics on the Dungeons & Dragons alignment axis — revealing your role in the great moral web. (D&D Alignment Test)`,
-      questions: []
-    },
-    {
-      title: "The Inner Guildmark",
-      description: `Are you a cunning Rogue, a devoted Cleric, a fiery Mage, or a battle-worn Warrior? This class reflection reads your combat style, values, and instincts to assign you the adventuring role your soul would carry in any realm. (Fantasy RPG Class Test)`,
-      questions: []
-    }
+ { 
+    realmName: "The Dreamlink Channel",
+    title: "The Sorting Scrolls",
+    description: `Drawn from the magical halls of Hogwarts, the Sorting Scrolls channel the enchanted Hat’s insight to place you where you belong — brave Gryffindor, wise Ravenclaw, loyal Hufflepuff, or cunning Slytherin. Your values, instincts, and ambitions will reveal your true magical kin. (Hogwarts House Test)`,
+    questions: []
+  },
+  {
+    realmName: "The Dreamlink Channel",
+    title: "The Divergent Divide",
+    description: `Step into the fractured society of post-apocalyptic Chicago. Will you choose selflessness, bravery, honesty, intelligence, or peace? This Divergent trial examines your worldview to align you with one of five factions — Abnegation, Dauntless, Candor, Erudite, or Amity — or reveal if you're Divergent. (Divergent Faction Alignment)`,
+    questions: []
+  },
+  {
+    realmName: "The Dreamlink Channel",
+    title: "The Races of Arda",
+    description: `From the fires of Mount Doom to the woods of Lothlórien, the lands of Middle-earth call to you. Are you a wise Elf, stalwart Dwarf, noble Man, curious Hobbit, or something older and more mysterious? This mythic reading places you among Tolkien’s legendary peoples based on spirit, strength, and heart. (Lord of the Rings Identity)`,
+    questions: []
+  },
+  {
+    realmName: "The Dreamlink Channel",
+    title: "The Bending Pathways",
+    description: `Water. Earth. Fire. Air. Long ago, the four nations lived in harmony… Which element calls to your soul? The Bending Pathways journey reveals your elemental nature based on temperament, balance, and inner will. Are you a Firebender, Earthbender, Waterbender, Airbender — or something beyond? (Avatar: The Last Airbender Element Test)`,
+    questions: []
+  },
+  {
+    realmName: "The Dreamlink Channel",
+    title: "The Capitol Index",
+    description: `The Capitol watches. The Districts endure. Where would you rise from in Panem’s fractured world? This immersive reading places you in one of the 13 Districts — from the coal-rich shadows of District 12 to the rebel secrets of District 13 — based on your survival instincts, traits, and drive. (Hunger Games District Test)`,
+    questions: []
+  },
+  {
+    realmName: "The Dreamlink Channel",
+    title: "The Jedi or the Sith?",
+    description: `A long time ago in a galaxy far, far away... the Force flows through all living things, but which side do you walk? This Star Wars transmission unveils your moral resonance — Jedi, Sith, or Gray — by exploring your instincts toward peace, power, or balance. (Star Wars Alignment Test)`,
+    questions: []
+  },
+  {
+    realmName: "The Dreamlink Channel",
+    title: "The Elder Scrolls Sigil",
+    description: `Born under a sign, shaped by war and wonder — what race and guild does your soul claim in the world of Tamriel? Are you a Nord warrior, Khajiit thief, Altmer mage, or something more elusive? Let the winds of Skyrim guide your destiny. (Skyrim Race & Guild Affinity)`,
+    questions: []
+  },
+  {
+    realmName: "The Dreamlink Channel",
+    title: "The Inner Pantheon",
+    description: `High upon Mount Olympus, ancient powers still stir. Are you a strategic Athena, passionate Aphrodite, wild Artemis, or thunderous Zeus? This divine alignment reveals the mythic energy within — the Olympian archetype that reflects your spirit. (Greek God Archetype)`,
+    questions: []
+  },
+  {
+    realmName: "The Dreamlink Channel",
+    title: "The Feywild Compass",
+    description: `Before you were forged in flesh, your essence flickered in the Feywilds and Forgotten Realms. This arcane reflection channels your energy into one of Dungeons & Dragons’ legendary lineages — Elf, Tiefling, Dragonborn, Gnome, and more — while unearthing your soul’s backstory. (D&D Race & Origin Test)`,
+    questions: []
+  },
+  {
+    realmName: "The Dreamlink Channel",
+    title: "The Echoes of Alignment",
+    description: `From the fractured mirror of myth, your moral compass emerges. Are you Lawful Good, Chaotic Neutral, or something more complex? This classic journey maps your ethics on the Dungeons & Dragons alignment axis — revealing your role in the great moral web. (D&D Alignment Test)`,
+    questions: []
+  },
+  {
+    realmName: "The Dreamlink Channel",
+    title: "The Inner Guildmark",
+    description: `Are you a cunning Rogue, a devoted Cleric, a fiery Mage, or a battle-worn Warrior? This class reflection reads your combat style, values, and instincts to assign you the adventuring role your soul would carry in any realm. (Fantasy RPG Class Test)`,
+    questions: []
+  }
   ]
 
 
