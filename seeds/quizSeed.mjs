@@ -45,7 +45,7 @@ const quizData = [
   },
   {
     realmName: 'Cipherhold',
-    title: 'Holland Code Extractor (RIASEC)',
+    title: 'Holland Code Extractor',
     description: `Cipherhold’s Career Engine utilizes the Holland Codes (RIASEC) to match your energy signature with six vocations: Realistic, Investigative, Artistic, Social, Enterprising, and Conventional. What realm of duty suits your essence? Let this extractor guide your calling.`,
   },
   {
