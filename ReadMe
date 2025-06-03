@@ -1,0 +1,29 @@
+# The Realmwalker Trials - Backend
+
+This is the backend server for **The Realmwalker Trials**, a personality RPG app where users explore themed realms and complete quizzes to unlock a rich, personalized self-discovery experience.
+
+| Section             | Details                                                                                     |
+|---------------------|---------------------------------------------------------------------------------------------|
+| **Features**        | - Express REST API for users, realms, quizzes, results                                      |
+|                     | - MongoDB with Mongoose schemas for data storage                                            |
+|                     | - User Authentication (register/login)                                                     |
+|                     | - Full CRUD for quiz results and user data                                                 |
+|                     | - Seed scripts to populate quiz questions and realms                                       |
+|                     | - Middleware for JSON parsing and error handling                                           |
+| **Project Structure**| - `models/`: Mongoose schemas (`User`, `Quiz`, `Realm`, `Result`)                         |
+|                     | - `routes/`: Express API route handlers                                                    |
+|                     | - `controllers/`: Business logic                                                           |
+|                     | - `db/conn.mjs`: MongoDB connection setup                                                  |
+|                     | - `seeds/`: Quiz and realm data seeds                                                      |
+|                     | - `middleware/`: Auth and error handling middleware                                        |
+|                     | - `server.mjs`: Express app entry point                                                    |
+| **API Endpoints**   | - `POST /api/users/register`: Register new user                                            |
+|                     | - `POST /api/users/login`: User login                                                     |
+|                     | - `GET /api/realms`: List all realms                                                       |
+|                     | - `GET /api/realms/:id`: Get realm details                                                 |
+|                     | - `POST /api/quizzes`: Submit quiz result                                                  |
+|                     | - `GET /api/quizzes/user/:userId`: Fetch user's quiz results                               |
+|                     | - `PUT /api/quizzes/:id`: Update quiz result                                               |
+|                     | - `DELETE /api/quizzes/:id`: Delete quiz result                                            |
+| **Technologies**    | Node.js, Express, MongoDB, Mongoose, JWT Authentication, ES Modules                        |
+
