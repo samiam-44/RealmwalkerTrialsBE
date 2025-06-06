@@ -2,7 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import connectDB from './db/conn.mjs';
 import User from './models/User.mjs';
-
+import enneagramRoutes from './routes/answerRoutes/enneagramRoutes.mjs'
 //ROUTE IMPORTS
 import realmRoutes from './routes/realmRoutes.mjs'
 import quizRoutes from './routes/quizRoutes.mjs';
@@ -18,6 +18,8 @@ connectDB()
 //REGISTER ROUTES
 app.use('/api/realms', realmRoutes);
 app.use('/api/quizzes', quizRoutes);
+app.use('/api/quizzes', enneagramRoutes);
+
 // ROOT ROUTE
 app.get('/', (req, res) => {
   res.send('Hello from the Realms of Identity backend!');
