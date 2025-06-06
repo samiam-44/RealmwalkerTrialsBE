@@ -20,7 +20,7 @@ const quizData = [
   },
   {
     realmName: 'Cipherhold',
-    title: 'OCEAN Protocol (Big Five Traits)',
+    title: 'OCEAN Protocol',
     description: `The AI Architects of Cipherhold trust only one model to categorize the organic psyche — the OCEAN Protocol. Based on the Big Five Personality Traits, it dissects your being into Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism. This protocol reveals how you adapt to chaos, structure, and others — critical knowledge for surviving Cipherhold’s logic storms.`,
   },
   {
@@ -50,7 +50,7 @@ const quizData = [
   },
   {
     realmName: 'Cipherhold',
-    title: 'Gardner’s Intelligence Array',
+    title: "Gardner's Intelligence",
     description: `In the vaults of Cipherhold rests Gardner’s Array — a multi-lens construct identifying eight (sometimes nine) intelligences. Logical? Linguistic? Spatial? Interpersonal? This assessment illuminates how your mind absorbs and manipulates reality. Knowledge is not linear — nor is power.`,
   },
   //KAEL'ZORAH QUIZZES
@@ -210,9 +210,10 @@ const quizData = [
 const seedQuizzes = async () => {
   try {
     await connectDB();
-    for (const quiz of quizData) {
-      const realm = await Realm.findOne({ name: quiz.realmName });
 
+    for (const quiz of quizData) {
+      // Adjust 'name' or 'realmName' depending on your Realm model schema
+      const realm = await Realm.findOne({ name: quiz.realmName });
       if (!realm) {
         console.warn(`Realm not found: ${quiz.realmName}`);
         continue;
@@ -220,12 +221,13 @@ const seedQuizzes = async () => {
 
       const newQuiz = new Quiz({
         title: quiz.title,
-        description: quiz.description
+        description: quiz.description,
+        questions: quiz.questions || [],
+         realm: realm._id 
       });
 
       const savedQuiz = await newQuiz.save();
 
-      // Push quiz ID into realm's quizzes array
       realm.quizzes.push(savedQuiz._id);
       await realm.save();
 

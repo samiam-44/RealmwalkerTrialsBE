@@ -1,8 +1,8 @@
 //QUESTIONS FOR CipherholdREAlM
 import mongoose from 'mongoose';
-import Question from './models/Question.mjs';
-import Quiz from './models/Quiz.mjs';
-
+import Question from '../../models/Question.mjs';
+import Quiz from '../../models/Quiz.mjs';
+import connectDB from '../../db/conn.mjs';
 const CipherholdQuestions = [
   //MEYER BRIGGS TEST
   {
@@ -2744,7 +2744,7 @@ const CipherholdQuestions = [
   },
   //GARDENERS INTELLIGENCE ARRAY---------------------------------------------------------------------
   {
-    quizTitle: "Gardner's Intelligence Quiz",
+    quizTitle: "Gardner's Intelligence",
     text: "I enjoy reading books and writing stories or essays.",
     intelligenceType: "Linguistic",
     options: [
@@ -2753,7 +2753,7 @@ const CipherholdQuestions = [
     ]
   },
   {
-    quizTitle: "Gardner's Intelligence Quiz",
+    quizTitle: "Gardner's Intelligence",
     text: "I find it easy to learn new words and use them in conversation.",
     intelligenceType: "Linguistic",
     options: [
@@ -2762,7 +2762,7 @@ const CipherholdQuestions = [
     ]
   },
   {
-    quizTitle: "Gardner's Intelligence Quiz",
+    quizTitle: "Gardner's Intelligence",
     text: "I enjoy solving word puzzles or playing word games like Scrabble.",
     intelligenceType: "Linguistic",
     options: [
@@ -2771,7 +2771,7 @@ const CipherholdQuestions = [
     ]
   },
   {
-    quizTitle: "Gardner's Intelligence Quiz",
+    quizTitle: "Gardner's Intelligence",
     text: "I often keep a journal or write notes and reflections.",
     intelligenceType: "Linguistic",
     options: [
@@ -2780,7 +2780,7 @@ const CipherholdQuestions = [
     ]
   },
   {
-    quizTitle: "Gardner's Intelligence Quiz",
+    quizTitle: "Gardner's Intelligence",
     text: "I enjoy working with numbers and solving math problems.",
     intelligenceType: "Logical-Mathematical",
     options: [
@@ -2789,7 +2789,7 @@ const CipherholdQuestions = [
     ]
   },
   {
-    quizTitle: "Gardner's Intelligence Quiz",
+    quizTitle: "Gardner's Intelligence",
     text: "I like to find patterns and analyze relationships between ideas.",
     intelligenceType: "Logical-Mathematical",
     options: [
@@ -2798,7 +2798,7 @@ const CipherholdQuestions = [
     ]
   },
   {
-    quizTitle: "Gardner's Intelligence Quiz",
+    quizTitle: "Gardner's Intelligence",
     text: "I enjoy playing strategy games or solving logic puzzles.",
     intelligenceType: "Logical-Mathematical",
     options: [
@@ -2807,7 +2807,7 @@ const CipherholdQuestions = [
     ]
   },
   {
-    quizTitle: "Gardner's Intelligence Quiz",
+    quizTitle: "Gardner's Intelligence",
     text: "I can easily perform mental math calculations.",
     intelligenceType: "Logical-Mathematical",
     options: [
@@ -2817,7 +2817,7 @@ const CipherholdQuestions = [
   },
 
   {
-    quizTitle: "Gardner's Intelligence Quiz",
+    quizTitle: "Gardner's Intelligence",
     text: "I like to draw, doodle, or visualize things in my head.",
     intelligenceType: "Spatial",
     options: [
@@ -2826,7 +2826,7 @@ const CipherholdQuestions = [
     ]
   },
   {
-    quizTitle: "Gardner's Intelligence Quiz",
+    quizTitle: "Gardner's Intelligence",
     text: "I enjoy designing things or building models.",
     intelligenceType: "Spatial",
     options: [
@@ -2835,7 +2835,7 @@ const CipherholdQuestions = [
     ]
   },
   {
-    quizTitle: "Gardner's Intelligence Quiz",
+    quizTitle: "Gardner's Intelligence",
     text: "I’m good at reading maps, charts, and diagrams.",
     intelligenceType: "Spatial",
     options: [
@@ -2844,7 +2844,7 @@ const CipherholdQuestions = [
     ]
   },
   {
-    quizTitle: "Gardner's Intelligence Quiz",
+    quizTitle: "Gardner's Intelligence",
     text: "I can easily picture objects or scenes from different angles.",
     intelligenceType: "Spatial",
     options: [
@@ -2854,7 +2854,7 @@ const CipherholdQuestions = [
   },
 
   {
-    quizTitle: "Gardner's Intelligence Quiz",
+    quizTitle: "Gardner's Intelligence",
     text: "I learn best when I move or do something physical.",
     intelligenceType: "Bodily-Kinesthetic",
     options: [
@@ -2863,7 +2863,7 @@ const CipherholdQuestions = [
     ]
   },
   {
-    quizTitle: "Gardner's Intelligence Quiz",
+    quizTitle: "Gardner's Intelligence",
     text: "I enjoy dancing, sports, or physical activities.",
     intelligenceType: "Bodily-Kinesthetic",
     options: [
@@ -2872,7 +2872,7 @@ const CipherholdQuestions = [
     ]
   },
   {
-    quizTitle: "Gardner's Intelligence Quiz",
+    quizTitle: "Gardner's Intelligence",
     text: "I use gestures and hands when I talk or explain things.",
     intelligenceType: "Bodily-Kinesthetic",
     options: [
@@ -2881,7 +2881,7 @@ const CipherholdQuestions = [
     ]
   },
   {
-    quizTitle: "Gardner's Intelligence Quiz",
+    quizTitle: "Gardner's Intelligence",
     text: "I enjoy working with tools, hands-on activities, or crafts.",
     intelligenceType: "Bodily-Kinesthetic",
     options: [
@@ -2891,7 +2891,7 @@ const CipherholdQuestions = [
   },
 
   {
-    quizTitle: "Gardner's Intelligence Quiz",
+    quizTitle: "Gardner's Intelligence",
     text: "I can recognize and remember melodies or rhythms easily.",
     intelligenceType: "Musical",
     options: [
@@ -2900,7 +2900,7 @@ const CipherholdQuestions = [
     ]
   },
   {
-    quizTitle: "Gardner's Intelligence Quiz",
+    quizTitle: "Gardner's Intelligence",
     text: "I enjoy listening to or playing music regularly.",
     intelligenceType: "Musical",
     options: [
@@ -2909,7 +2909,7 @@ const CipherholdQuestions = [
     ]
   },
   {
-    quizTitle: "Gardner's Intelligence Quiz",
+    quizTitle: "Gardner's Intelligence",
     text: "I often tap rhythms or hum without thinking.",
     intelligenceType: "Musical",
     options: [
@@ -2918,7 +2918,7 @@ const CipherholdQuestions = [
     ]
   },
   {
-    quizTitle: "Gardner's Intelligence Quiz",
+    quizTitle: "Gardner's Intelligence",
     text: "I can play a musical instrument or sing well.",
     intelligenceType: "Musical",
     options: [
@@ -2928,7 +2928,7 @@ const CipherholdQuestions = [
   },
 
   {
-    quizTitle: "Gardner's Intelligence Quiz",
+    quizTitle: "Gardner's Intelligence",
     text: "I enjoy working in teams or group settings.",
     intelligenceType: "Interpersonal",
     options: [
@@ -2937,7 +2937,7 @@ const CipherholdQuestions = [
     ]
   },
   {
-    quizTitle: "Gardner's Intelligence Quiz",
+    quizTitle: "Gardner's Intelligence",
     text: "I can easily understand others’ feelings or points of view.",
     intelligenceType: "Interpersonal",
     options: [
@@ -2946,7 +2946,7 @@ const CipherholdQuestions = [
     ]
   },
   {
-    quizTitle: "Gardner's Intelligence Quiz",
+    quizTitle: "Gardner's Intelligence",
     text: "I enjoy helping or teaching others.",
     intelligenceType: "Interpersonal",
     options: [
@@ -2955,7 +2955,7 @@ const CipherholdQuestions = [
     ]
   },
   {
-    quizTitle: "Gardner's Intelligence Quiz",
+    quizTitle: "Gardner's Intelligence",
     text: "People often come to me for advice or support.",
     intelligenceType: "Interpersonal",
     options: [
@@ -2965,7 +2965,7 @@ const CipherholdQuestions = [
   },
 
   {
-    quizTitle: "Gardner's Intelligence Quiz",
+    quizTitle: "Gardner's Intelligence",
     text: "I spend a lot of time reflecting on my thoughts and feelings.",
     intelligenceType: "Intrapersonal",
     options: [
@@ -2974,7 +2974,7 @@ const CipherholdQuestions = [
     ]
   },
   {
-    quizTitle: "Gardner's Intelligence Quiz",
+    quizTitle: "Gardner's Intelligence",
     text: "I understand my strengths and weaknesses well.",
     intelligenceType: "Intrapersonal",
     options: [
@@ -2983,7 +2983,7 @@ const CipherholdQuestions = [
     ]
   },
   {
-    quizTitle: "Gardner's Intelligence Quiz",
+    quizTitle: "Gardner's Intelligence",
     text: "I like to set goals and evaluate my own progress.",
     intelligenceType: "Intrapersonal",
     options: [
@@ -2992,7 +2992,7 @@ const CipherholdQuestions = [
     ]
   },
   {
-    quizTitle: "Gardner's Intelligence Quiz",
+    quizTitle: "Gardner's Intelligence",
     text: "I prefer working independently over group work.",
     intelligenceType: "Intrapersonal",
     options: [
@@ -3002,7 +3002,7 @@ const CipherholdQuestions = [
   },
 
   {
-    quizTitle: "Gardner's Intelligence Quiz",
+    quizTitle: "Gardner's Intelligence",
     text: "I enjoy being outdoors and exploring nature.",
     intelligenceType: "Naturalistic",
     options: [
@@ -3011,7 +3011,7 @@ const CipherholdQuestions = [
     ]
   },
   {
-    quizTitle: "Gardner's Intelligence Quiz",
+    quizTitle: "Gardner's Intelligence",
     text: "I can recognize different types of plants, animals, or rocks.",
     intelligenceType: "Naturalistic",
     options: [
@@ -3020,7 +3020,7 @@ const CipherholdQuestions = [
     ]
   },
   {
-    quizTitle: "Gardner's Intelligence Quiz",
+    quizTitle: "Gardner's Intelligence",
     text: "I feel calm or inspired when surrounded by nature.",
     intelligenceType: "Naturalistic",
     options: [
@@ -3029,7 +3029,7 @@ const CipherholdQuestions = [
     ]
   },
   {
-    quizTitle: "Gardner's Intelligence Quiz",
+    quizTitle: "Gardner's Intelligence",
     text: "I’m interested in environmental issues and sustainability.",
     intelligenceType: "Naturalistic",
     options: [
@@ -3045,35 +3045,48 @@ const CipherholdQuestions = [
 
 
 
+// Seed function using a for...of loop and individual saves
+const seedQuestions = async () => {
 
-// Add other questions here...
-
-
-async function seedQuestions() {
   try {
-    await mongoose.connect('mongodb://localhost:27017/TheRealmwalkerTrials');
+    await connectDB();
 
+    // Loop through each question in the array
     for (const q of CipherholdQuestions) {
-      //Find quiz by title and get its _id reference
+
+      // Find the quiz associated with this question by its title
       const quiz = await Quiz.findOne({ title: q.quizTitle });
+        
       if (!quiz) {
         console.warn(`Quiz not found: ${q.quizTitle}`);
-        continue;
+        continue; // Skip this question if quiz is missing
       }
-      //Create question linked to the quiz
-        const { quizTitle, ...questionData } = q;
 
-      await Question.create({
+      const { quizTitle, ...questionData } = q;
+
+      //Create the question, linking it to the found quiz
+      const newQuestion = new Question({
         ...questionData,
-        quiz: quiz._id,
+        quiz: quiz._id, 
       });
+
+      //Save question to the database
+      const savedQuestion = await newQuestion.save();
+        
+      // If the quiz has a 'questions' array field push the new question into it
+      if (!quiz.questions) quiz.questions = [];
+      quiz.questions.push(savedQuestion._id);
+      await quiz.save(); // Save the updated quiz document
+
+      console.log(` Added question: "${q.text}" to quiz: "${quiz.title}"`);
     }
 
-    console.log('Cipherhold questions seeded!');
-    mongoose.disconnect();
-  } catch (err) {
-    console.error(err);
+    console.log(' All Cipherhold questions seeded successfully.');
+    process.exit(0); // Exit the script
+  } catch (error) {
+    console.error(' Error seeding questions:', error);
+    process.exit(1); // Exit with failure
   }
-}
+};
 
 seedQuestions();

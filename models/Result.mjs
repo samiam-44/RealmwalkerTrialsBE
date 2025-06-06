@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 const resultSchema = new mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId, //Get user by id
-        red: 'User',
+        ref: 'User',
         required: true,
     },
     quiz: {

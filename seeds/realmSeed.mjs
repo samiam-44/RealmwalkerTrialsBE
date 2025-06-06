@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 import connectDB from '../db/conn.mjs';
 import Realm from '../models/Realm.mjs';
 import Quiz from '../models/Quiz.mjs';
-import Question from '../models/Question.mjs';
+
 
 dotenv.config(); //Load env variable
 
@@ -32,16 +32,19 @@ const realmData = [
 ];
 
 const seedRealms = async () => {
-    try {
-        await connectDB();
-        //insert new realm data
-        await Realm.insertMany(realmData);
-        console.log('Realms seeded successfully');
-    } catch (error) {
-        console.error('Error seeding realms:', error);
-        mongoose.connection.close();
-    }
+  try {
+    await connectDB();
+    console.log('Seeding realms now...');
+    // Clear existing data if you want to avoid duplicates
+    await Realm.deleteMany({});
+    // Insert new data
+    await Realm.insertMany(realmData);
+    console.log('Realms seeded successfully');
+  } catch (error) {
+    console.error('Error seeding realms:', error);
+  } finally {
+    mongoose.connection.close();
+  }
 };
 
 seedRealms();
-
