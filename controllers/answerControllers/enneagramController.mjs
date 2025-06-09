@@ -1,19 +1,48 @@
-import EnneagramResult from '../models/EnneagramModel.mjs';
+import Question from '../../models/Question.mjs';
+import EnneagramResult from '../../models/AnswerModels/EnneagramModel.mjs';
+import { calculateEnneagramScore } from '../../logic/enneagram.mjs';
 
-const topType = topTypes[0];
-const fullResult = await EnneagramResult.findOne({ type: topType });
+// Get Enneagram questions
+export const getEnneagramQuestions = async (req, res) => {
+  try {
+    const questions = await Question.find({ quizTitle: "Enneagram Sigils" });
+    res.json(questions);
+  } catch (error) {
+    res.status(500).json({ error: "Failed to fetch Enneagram questions." });
+  }
+};
 
-res.json({
-  scores,
-  type: fullResult.type,
-  name: fullResult.name,
-  description: fullResult.description,
-  coreMotivation: fullResult.coreMotivation,
-  coreFear: fullResult.coreFear,
-  strengths: fullResult.strengths,
-  challenges: fullResult.challenges,
-  idealCareers: fullResult.idealCareers,
-  addictionTendencies: fullResult.addictionTendencies,
-  compatibility: fullResult.compatibility,
-  growthPath: fullResult.growthPath
-});
+// Handle Enneagram submission
+export const calculateEnneagramResult = async (req, res) => {
+  try {
+    const answers = req.body.answers;
+
+    // Delegate to logic function
+    const { scores, topTypes, fullResult } = await calculateEnneagramScore(answers);
+
+    if (!fullResult) {
+      return res.status(404).json({ error: "Enneagram type not found." });
+    }
+
+    res.json({
+      scores,
+      type: fullResult.type,
+      name: fullResult.name,
+      description: fullResult.description,
+      coreMotivation: fullResult.coreMotivation,
+      coreFear: fullResult.coreFear,
+      strengths: fullResult.strengths,
+      challenges: fullResult.challenges,
+      idealCareers: fullResult.idealCareers,
+      addictionTendencies: fullResult.addictionTendencies,
+      compatibility: fullResult.compatibility,
+      growthPath: fullResult.growthPath
+    });
+
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Failed to calculate Enneagram result." });
+  }
+};
+
+

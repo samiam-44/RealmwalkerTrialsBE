@@ -1,7 +1,3 @@
-
-//======================================
-// MBTI QUIZ LOGIC
-//===============================================
 //Function take an array of answers [ letters....] and returns the type with its description
 export function MBTIResult(userAnswers) {
     //Counts how many times a ltter appears

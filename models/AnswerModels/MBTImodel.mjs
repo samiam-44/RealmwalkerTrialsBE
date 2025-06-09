@@ -1,11 +1,28 @@
-import mongoose from 'mongoose'
+import mongoose from 'mongoose';
 
 const MBTIschema = new mongoose.Schema({
-    typeCode: { type: String, required: true, unique: true }, // e.g. 'INTJ'
-    title: { type: String}, // e.g. 'The Architect'
-    descriptionText: {type: String}, //Description of type
+  type: { type: String, required: true, unique: true },
+  title: { type: String, required: true },
+  description: {
+    explained: String,
+    coreMotivation: String,
+    coreFear: String,
+    strengths: String,
+    challenges: String,
+    idealCareers: [
+      {
+        field: String,
+        roles: [String]
+      }
+    ],
+    communicationStyle: String,
+    relationships: {
+      romantic: String,
+      friendships: String,
+      workplace: String
+    }
+  }
 });
 
-const MBTI = mongoose.model('MBTI', MBTIschema)
-
-export default MBTI
+const MBTI = mongoose.model('MBTI', MBTIschema);
+export default MBTI;

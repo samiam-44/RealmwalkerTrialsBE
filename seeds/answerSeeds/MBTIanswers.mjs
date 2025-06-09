@@ -1,5 +1,10 @@
 import mongoose from 'mongoose'
-import MBTI from '../models/AnswerModels/MBTImodel.mjs';
+import MBTI from '../../models/AnswerModels/MBTImodel.mjs';
+import connectDB from '../../db/conn.mjs'
+import dotenv from 'dotenv'
+
+dotenv.config();
+await connectDB();
 
 const typesMBTI = [
   //ANALYSISTS
@@ -505,13 +510,13 @@ const typesMBTI = [
 
 async function seedMBTI() {
   try {
-    await mongoose.connect('mongodb://localhost:27017/TheRealmwalkerTrials');
+    await connectDB();
 
     for (const mbtiType of typesMBTI) {
       await MBTI.findOneAndUpdate(
-        { typeCode: mbtiType.typeCode },
-        mbtiType,
-        { upsert: true }
+        { type: mbtiType.type },   // Query by 'type'
+        mbtiType,                  // Update with full object
+        { upsert: true, new: true }
       );
     }
 

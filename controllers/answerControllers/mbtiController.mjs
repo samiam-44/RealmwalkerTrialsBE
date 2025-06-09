@@ -1,24 +1,26 @@
-import express from 'express';
-import MBTI from '../models/AnswerModels/MBTImodel.mjs';
-import { MBTIResult } from '../logic/mbti.mjs';
+import MBTI from '../../models/AnswerModels/MBTImodel.mjs';
+import { MBTIResult } from '../../logic/mbti.mjs';
 
-const router = express.Router()
+export async function calculateMBTIResult(req, res) {
+  try {
+    const userAnswers = req.body.answers; // e.g., ['E', 'N', 'T', 'J']
+    const type = MBTIResult(userAnswers);
 
-async function handleMBTIQuiz(req, res) {
-  const userAnswers = req.body.answers; // e.g., ['E', 'N', 'T', 'J', ...]
-  const typeCode = MBTIResult(userAnswers);
-  const mbtiDoc = await MBTI.findOne({ typeCode });
+    const mbtiDoc = await MBTI.findOne({ type });
 
-  if (!mbtiDoc) {
-    return res.status(404).json({ error: 'MBTI type not found' });
+    if (!mbtiDoc) {
+      return res.status(404).json({ error: 'MBTI type not found' });
+    }
+
+    res.json({
+      type: mbtiDoc.type,
+      title: mbtiDoc.title,
+      description: mbtiDoc.description // full nested object returned
+    });
+  } catch (error) {
+    console.error('MBTI calculation error:', error);
+    res.status(500).json({ error: 'Internal server error during MBTI calculation' });
   }
-
-  // Save result in Result model
-
-  res.json({
-    type: mbtiDoc.typeCode,
-    title: mbtiDoc.title,
-    description: mbtiDoc.descriptionText
-  });
 }
-export default router
+
+
