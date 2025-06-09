@@ -8,6 +8,7 @@ await connectDB();
 
 const enneagramTypes = [
    {
+     testName: 'Enneagram Sigils',
     type: "Type 1",
     title: "The Reformer — Sentinel of the Syntax Tower",
     description: {
@@ -30,6 +31,7 @@ const enneagramTypes = [
     }
   },
      {
+       testName: 'Enneagram Sigils',
     type: "Type 2",
     title: "The Helper — Empath of the Vital Grid",
     description: {
@@ -52,6 +54,7 @@ const enneagramTypes = [
     }
   },
   {
+     testName: 'Enneagram Sigils',
     type: "Type 3",
     title: "The Achiever — Luminary of the Glass Spire",
     description: {
@@ -73,6 +76,7 @@ const enneagramTypes = [
     }
   },
   {
+     testName: 'Enneagram Sigils',
     type: "Type 4",
     title: "The Individualist — Oracle of the Phantom Layer",
     description: {
@@ -94,6 +98,7 @@ const enneagramTypes = [
     }
   },
   {
+     testName: 'Enneagram Sigils',
     type: "Type 5",
     title: "The Investigator — Archivist of the Hollow Core",
     description: {
@@ -114,6 +119,7 @@ const enneagramTypes = [
     }
   },
   {
+     testName: 'Enneagram Sigils',
     type: "Type 6",
     title: "The Loyalist — Warden of the Codewall Bastion",
     description: {
@@ -134,6 +140,7 @@ const enneagramTypes = [
     }
   },
      {
+       testName: 'Enneagram Sigils',
     type: "Type 7",
     title: "The Enthusiast — Sparkcaster of the Infinite Loop",
     description: {
@@ -155,6 +162,7 @@ const enneagramTypes = [
     }
   },
   {
+     testName: 'Enneagram Sigils',
     type: "Type 8",
     title: "The Challenger — Enforcer of the Black Firewall",
     description: {
@@ -176,6 +184,7 @@ const enneagramTypes = [
     }
   },
   {
+     testName: 'Enneagram Sigils',
     type: "Type 9",
     title: "The Peacemaker — Dreamer of the Etherfield",
     description: {
@@ -203,7 +212,7 @@ async function seedEnneagramResults() {
   try {
     await Description.deleteMany();
     const created = await Description.insertMany(enneagramTypes);
-    console.log("Enneagram results seeded:", created.length);
+    console.log("Enneagram descriptions seeded:", created.length);
     process.exit();
   } catch (err) {
     console.error("Error seeding Enneagram descriptions:", err);
