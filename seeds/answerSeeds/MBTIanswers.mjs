@@ -2,888 +2,505 @@ import mongoose from 'mongoose'
 import MBTI from '../models/AnswerModels/MBTImodel.mjs';
 
 const typesMBTI = [
-    //ANALYSISTS
-   {
-    typeCode: "INTJ",
-    title: "The Architect",
-    descriptionText: `Within the crystalline databanks of Cipherhold lies the Codex of Sixteen Paths — an arcane schema used by the AI Oracles to classify the essence of one’s cognition. The INTJ, known as *The Architect*, is a silent strategist, a master planner who molds the future with sharp logic and visionary insight.
+  //ANALYSISTS
+  {
+    type: "INTJ",
+    title: "The Architect — Oracle of the Codex",
+    description: {
+      explained: `Within the crystalline databanks of Cipherhold lies the Codex of Sixteen Paths — an arcane schema used by the AI Oracles to classify the essence of one’s cognition. The INTJ, known as *The Architect*, is a silent strategist who sees the world in terms of systems, logic, and long-range vision. With minds engineered for mastery, they craft futures with precision, preferring solitude over distraction and innovation over tradition.`,
 
-**The Architect’s Essence:**
-• Mastermind of long-term strategy and visionary insight  
-• Thrives on logic, knowledge, and precision  
-• Crafts order from chaos with independence and clarity
+      coreMotivation: "To bring vision into reality through logic, mastery, and independence.",
+      coreFear: "Being powerless, unprepared, or controlled by others.",
 
-**Strengths:**
-• Unyielding strategic thinker  
-• Relentless pursuit of knowledge  
-• Calm and composed under pressure  
-• Fiercely independent
+      strengths: "Strategic, visionary, disciplined, self-reliant, intellectually curious.",
+      challenges: "Can be overly critical, emotionally detached, rigid, and dismissive of others’ input.",
 
-**Weaknesses:**
-• Tendency toward isolation and emotional detachment  
-• Difficulty expressing inner visions  
-• Perfectionism can slow progress  
-• May appear cold or aloof
+      idealCareers: [
+        { field: "Technology", roles: ["Software Developer", "Data Scientist", "Machine Learning Engineer", "Systems Architect"] },
+        { field: "Science", roles: ["Scientific Researcher", "Astrophysicist", "Biotech Researcher"] },
+        { field: "Engineering", roles: ["Mechanical Engineer", "Civil Engineer", "Robotics Engineer", "Urban Planner"] },
+        { field: "Business & Strategy", roles: ["Strategic Consultant", "Business Intelligence Analyst", "Product Manager", "Operations Analyst"] },
+        { field: "Cybersecurity", roles: ["Information Security Analyst", "Cybersecurity Architect", "Network Strategist"] },
+        { field: "Law & Policy", roles: ["Legal Strategist", "Intellectual Property Lawyer", "Policy Analyst"] },
+        { field: "Academia", roles: ["Professor", "Philosopher", "Mathematician", "Research Fellow"] },
+        { field: "Medical & Health", roles: ["Diagnostic Specialist", "Neuroscientist", "Psychiatrist"] },
+        { field: "Government & Intelligence", roles: ["Intelligence Analyst", "Think Tank Researcher", "Government Strategist"] }
+      ],
 
-**Careers Where The Architect Excels:**
-• Scientific Research & Development  
-• Engineering (Mechanical, Civil, Software)  
-• Architecture & Urban Planning  
-• Strategic Consulting & Business Analysis  
-• Software Development & Data Science  
-• Medicine & Healthcare (especially diagnostic or research roles)  
-• Law & Legal Analysis  
-• Academia & Intellectual Pursuits  
-• Systems Design & Cybersecurity
+      communicationStyle: "Clear, concise, and analytical. Prefers logic-driven conversations and dislikes small talk.",
 
-**Romantic Relationships:**
-• Loyal but reserved; love wrapped in enigma  
-• Seeks intellectually stimulating and visionary partners  
-• Requires patience and respect for independence
-
-**Friendships:**
-• Few but deeply loyal  
-• Built on mutual respect and shared quests for knowledge
-
-**Parenthood:**
-• Guides with wisdom and high expectations  
-• Fosters independence and critical thinking  
-• Provides steadfast, though subtle, support
-
-**Workplace Habits:**
-• Prefers solitude or small trusted groups  
-• Values efficiency and depth over chatter  
-• Sets high standards for self and others  
-• Communicates with precision; favors action over words`
+      relationships: {
+        romantic: "Reserved but deeply loyal. Seeks intelligent, independent partners who respect their space and vision.",
+        friendships: "Keeps a small, trusted circle. Values intellectual depth, long-term loyalty, and mutual growth.",
+        workplace: "Independent, focused, and organized. Prefers structured environments with minimal micromanagement and high expectations."
+      }
+    }
   },
   {
-    typeCode: "INTP",
-    title: "The Logician",
-    descriptionText: `In the labyrinthine vaults of Cipherhold, the INTP stands as *The Logician* — a silent architect of abstract realms and limitless logic. They are the coders of reality itself, bending theory into elegant frameworks that few can comprehend.
+    type: "INTP",
+    title: "The Logician — Mindsmith of the Infinite Vault",
+    description: {
+      explained: `Deep within the Infinite Vaults of Cipherhold, the INTP — *The Logician* — weaves invisible threads of logic and endless possibility. These thinkers live in a world of abstract puzzles and hypothetical realms. They build systems from scratch, theorize endlessly, and seek truth beyond surface-level reality. Elusive and brilliant, they question everything — including themselves.`,
 
-**The Logician’s Essence:**
-• Architect of mental blueprints and thought experiments  
-• Lives to decode systems, solve puzzles, and theorize beyond limits  
-• Guided by curiosity, detachment, and a hunger for truth
+      coreMotivation: "To understand how the world works through logic, exploration, and conceptual mastery.",
+      coreFear: "Being intellectually incapable, constrained, or unable to find meaning.",
 
-**Strengths:**
-• Deep and independent thinker  
-• Quick to grasp complex patterns and systems  
-• Innovative, imaginative, and precise  
-• Thrives in solitude and conceptual depth
+      strengths: "Analytical, inventive, curious, independent, highly logical.",
+      challenges: "Struggles with consistency, emotional expression, and real-world follow-through.",
 
-**Weaknesses:**
-• May struggle with follow-through or real-world execution  
-• Emotionally reserved and sometimes dismissive  
-• Overthinks and can become paralyzed by endless possibilities  
-• Can appear aloof or overly skeptical
+      idealCareers: [
+        { field: "Science & Math", roles: ["Theoretical Physicist", "Mathematician", "Astrophysicist", "Research Scientist"] },
+        { field: "Technology", roles: ["AI Engineer", "Machine Learning Researcher", "Software Developer", "Systems Architect"] },
+        { field: "Philosophy & Humanities", roles: ["Philosopher", "Academic Theorist", "Epistemologist", "Ethics Researcher"] },
+        { field: "Engineering", roles: ["Systems Engineer", "Data Engineer", "Cryptographic Engineer"] },
+        { field: "Cybersecurity", roles: ["Cybersecurity Analyst", "Cryptographer", "Penetration Tester"] },
+        { field: "Academia & Education", roles: ["University Professor", "STEM Educator", "Scientific Writer", "Instructional Designer"] },
+        { field: "Game Development", roles: ["Game Mechanic Designer", "Simulation Engineer", "AI Programmer"] },
+        { field: "Futurism & Innovation", roles: ["Innovation Strategist", "Futurist", "Technology Forecaster"] }
+      ],
 
-**Careers Where The Logician Excels:**
-• Theoretical Physics & Mathematics  
-• Artificial Intelligence & Machine Learning  
-• Philosophy & Logic  
-• Software Development & Systems Architecture  
-• Scientific Research  
-• Engineering (especially systems or data-focused)  
-• Academia & Teaching in STEM fields  
-• Cybersecurity & Cryptography
+      communicationStyle: "Detached and cerebral. Prefers big-picture debates and system-based conversations over emotional discussions.",
 
-**Romantic Relationships:**
-• Intellect over emotion; needs mental connection  
-• Affection is expressed through shared ideas and problem-solving  
-• Independent, honest, and loyal once committed  
-• Needs space and time alone to recharge
-
-**Friendships:**
-• Loyal to a very small, like-minded circle  
-• Values deep, thought-provoking conversations  
-• May forget to check in — but cares deeply  
-• Attracted to wit, curiosity, and mystery
-
-**Parenthood:**
-• Encourages independent thought and exploration  
-• May be distant emotionally but offers vast intellectual support  
-• Teaches curiosity, open-mindedness, and skepticism of norms
-
-**Workplace Habits:**
-• Focuses better alone or in quiet, innovative teams  
-• Resists rigid systems or micromanagement  
-• May ignore deadlines in pursuit of perfection  
-• Brings visionary insights and analytical clarity`
+      relationships: {
+        romantic: "Values intellectual intimacy above all. Needs space, patience, and a partner who enjoys abstract thinking and respects autonomy.",
+        friendships: "Low-maintenance but loyal to a curious few. Thrives on thought-provoking dialogue, inside jokes, and shared exploration.",
+        workplace: "Independent, flexible, and best when given creative freedom. Excels in environments that reward deep thinking and question the norm."
+      }
+    }
   },
   {
-    typeCode: "ENTJ",
-    title: "The Commander",
-    descriptionText: `From the high towers of Cipherhold’s strategic command, the ENTJ emerges as *The Commander* — a visionary leader who forges futures with bold ambition, unwavering logic, and relentless determination. They see the bigger picture and lead with confidence.
+    type: "ENTJ",
+    title: "The Commander — Strategist of the High Spire",
+    description: {
+      explained: `From the soaring towers of Cipherhold’s Strategic Spire, the ENTJ — *The Commander* — watches the future unfold like a tactical map. They are visionaries of order and momentum, born to lead with logic, charisma, and unstoppable drive. Where others hesitate, the Commander charts a path forward — and rallies others to follow.`,
 
-**The Commander’s Essence:**
-• Bold architect of systems, teams, and visions  
-• Leads with strategy, precision, and charisma  
-• Thrives on challenges and inspires others to rise
+      coreMotivation: "To build and lead successful systems, teams, and missions with logic and clarity.",
+      coreFear: "Being powerless, disrespected, or held back by inefficiency or incompetence.",
 
-**Strengths:**
-• Exceptional strategic thinking and leadership  
-• Decisive, confident, and goal-oriented  
-• Natural organizer and planner  
-• Charismatic and persuasive
+      strengths: "Bold, strategic, decisive, confident, visionary, influential.",
+      challenges: "Can be impatient, overly blunt, dismissive of emotion, and intolerant of inefficiency.",
 
-**Weaknesses:**
-• May come off as domineering or insensitive  
-• Impatient with inefficiency or emotional reasoning  
-• Struggles to tolerate incompetence  
-• Can overlook emotional nuance in others
+      idealCareers: [
+        { field: "Business & Leadership", roles: ["CEO", "Startup Founder", "Operations Director", "Corporate Strategist"] },
+        { field: "Law & Politics", roles: ["Attorney", "Policy Advisor", "Political Strategist", "Campaign Director"] },
+        { field: "Finance & Investment", roles: ["Financial Analyst", "Venture Capitalist", "Investment Banker", "Economist"] },
+        { field: "Engineering & Tech", roles: ["Engineering Manager", "Project Executive", "Technical Program Manager"] },
+        { field: "Government & Military", roles: ["Officer", "Defense Strategist", "Government Executive"] },
+        { field: "Entrepreneurship", roles: ["Startup CEO", "Innovation Consultant", "Business Coach"] },
+        { field: "Tech Industry", roles: ["Product Manager", "Tech Startup Executive", "AI Operations Lead"] },
+        { field: "Corporate Operations", roles: ["Logistics Planner", "Management Consultant", "Process Optimization Lead"] }
+      ],
 
-**Careers Where The Commander Excels:**
-• Executive Leadership & Entrepreneurship  
-• Corporate Strategy & Business Development  
-• Law & Political Strategy  
-• Engineering Management  
-• Finance & Investment Analysis  
-• Military or Government Leadership  
-• Project Management  
-• Tech Startups & Venture Capital
+      communicationStyle: "Direct, persuasive, and confident. Focused on goals, logic, and results rather than emotion.",
 
-**Romantic Relationships:**
-• Seeks a strong, capable partner who shares their drive  
-• Expresses love through action, protection, and long-term planning  
-• May struggle with emotional vulnerability  
-• Values loyalty, ambition, and intellect
-
-**Friendships:**
-• Drawn to ambitious, independent minds  
-• May take charge even in casual settings  
-• Loyal and dependable in crisis  
-• Can be competitive, but respects strength in others
-
-**Parenthood:**
-• High expectations and structured guidance  
-• Encourages independence and achievement  
-• Can be strict, but deeply invested in their child’s success  
-• Offers practical wisdom and life planning
-
-**Workplace Habits:**
-• Takes control and motivates others  
-• Unafraid to make difficult decisions  
-• Holds high standards and expects efficiency  
-• Pushes teams to meet their potential with firm guidance`
+      relationships: {
+        romantic: "Seeks a strong, intelligent, and ambitious partner. Shows love through planning, protection, and shared vision. May need to work on emotional vulnerability.",
+        friendships: "Leads even among peers. Loyal, dependable, and drawn to driven individuals. Competitive, but respectful of strength and capability.",
+        workplace: "Thrives in leadership roles. Pushes teams toward excellence. Intolerant of inefficiency, but inspires others through clarity and confidence."
+      }
+    }
   },
   {
-    typeCode: "ENTP",
-    title: "The Debater",
-    descriptionText: `Across the neon forums of Cipherhold’s Thought Arenas strides the ENTP — *The Debater*. Witty, agile, and endlessly curious, Debaters thrive on intellectual sparring, bold innovation, and challenging the status quo. They are the alchemists of ideas, always shaping and reshaping the world around them.
+    type: "ENTP",
+    title: "The Debater — Alchemist of the Thought Arenas",
+    description: {
+      explained: `In the electric arenas of Cipherhold, the ENTP — *The Debater* — thrives on chaos and curiosity. Bold and boundary-breaking, they’re idea alchemists who remix logic, challenge authority, and thrive in debate. They wield words like spells and spark revolutions with questions no one else dares ask.`,
 
-**The Debater’s Essence:**
-• Champion of debate, exploration, and disruptive ideas  
-• Fearlessly questions convention and authority  
-• Quick-thinking, inventive, and full of charm
+      coreMotivation: "To explore possibilities, innovate, and challenge conventional thinking.",
+      coreFear: "Being bored, trapped, or stuck in routine or conformity.",
 
-**Strengths:**
-• Exceptionally creative and mentally agile  
-• Loves solving complex problems in unconventional ways  
-• Energetic and engaging communicators  
-• Embraces risk, change, and big-picture thinking
+      strengths: "Inventive, charismatic, adaptable, quick-witted, and bold.",
+      challenges: "Easily distracted, argumentative, avoids routine, may neglect details or follow-through.",
 
-**Weaknesses:**
-• Can be argumentative for the thrill of it  
-• Loses interest in details or long-term commitments  
-• May struggle with follow-through or routine  
-• Easily bored without intellectual stimulation
+      idealCareers: [
+        { field: "Entrepreneurship & Innovation", roles: ["Startup Founder", "Product Developer", "Innovation Consultant"] },
+        { field: "Media & Communication", roles: ["Journalist", "TV Host", "Media Producer", "Podcast Creator"] },
+        { field: "Marketing & PR", roles: ["Brand Strategist", "Creative Director", "Ad Campaign Manager", "Public Relations Specialist"] },
+        { field: "Politics & Law", roles: ["Political Campaign Manager", "Debate Coach", "Public Policy Analyst", "Lawyer"] },
+        { field: "Technology & Design", roles: ["UX Designer", "Game Developer", "Software Ideator", "App Prototype Architect"] },
+        { field: "Consulting & Strategy", roles: ["Management Consultant", "Business Strategist", "Disruption Analyst"] },
+        { field: "Education & Philosophy", roles: ["Philosopher", "Educator", "Idea Lab Facilitator", "Curriculum Innovator"] }
+      ],
 
-**Careers Where The Debater Excels:**
-• Entrepreneurship & Startups  
-• Marketing, Advertising, & Public Relations  
-• Consulting & Innovation Strategy  
-• Journalism & Media Production  
-• Politics & Campaign Strategy  
-• Software Design & Game Development  
-• Philosophy, Law, or Debate Coaching  
-• Inventing & Product Development
+      communicationStyle: "Dynamic, witty, and provocative. Loves to challenge assumptions and push conversations into uncharted territory.",
 
-**Romantic Relationships:**
-• Passionate and intellectually engaging  
-• Thrives in relationships built on mental stimulation  
-• May resist emotional depth or structure  
-• Craves novelty and spontaneity in love
-
-**Friendships:**
-• Life of the party with endless conversation topics  
-• Attracts other curious, open-minded people  
-• Will challenge friends’ opinions just for fun  
-• Loyal to those who can match their mental speed
-
-**Parenthood:**
-• Encourages curiosity and independence  
-• Teaches kids to question and explore  
-• Can struggle with consistency or discipline  
-• Fosters creative expression and adaptability
-
-**Workplace Habits:**
-• Dynamic and idea-driven contributor  
-• Dislikes rigid structure or micromanagement  
-• Excels at brainstorming and early-stage innovation  
-• Needs freedom and variety to stay motivated`
-  },
-   {
-    typeCode: "ISTP",
-    title: "The Virtuoso",
-    descriptionText: `Within the intricate gears of Cipherhold, the ISTP emerges as *The Virtuoso* — a pragmatic craftsman and fearless problem-solver who thrives in the hands-on realm of action and innovation.
-
-**The Virtuoso’s Essence:**
-* Bold and practical, master of tools and tactics  
-* Loves exploring how things work through direct experience  
-* Independent and adaptable, comfortable with spontaneity
-
-**Strengths:**
-* Skilled at troubleshooting and hands-on tasks  
-* Calm under pressure and quick to react  
-* Highly observant and detail-oriented  
-* Flexible and resourceful in unpredictable situations
-
-**Weaknesses:**
-* Can be reserved or distant emotionally  
-* Dislikes routine and strict rules  
-* May struggle with long-term planning or follow-through  
-* Sometimes impulsive or risk-prone
-
-**Careers Where The Virtuoso Excels:**
-* Engineering & Mechanics  
-* Skilled Trades & Craftsmanship  
-* Emergency Services & First Responders  
-* Technology & IT Support  
-* Sports & Physical Activities  
-* Pilot or Driver Roles  
-* Military & Tactical Fields
-
-**Romantic Relationships:**
-* Loyal but low-key partners  
-* Express love through actions rather than words  
-* Need personal space and freedom  
-* Appreciate partners who respect their independence
-
-**Friendships:**
-* Prefer small groups or one-on-one connections  
-* Value shared activities and adventures  
-* Enjoy spontaneity and fun challenges  
-* Can be dependable in crises
-
-**Parenthood:**
-* Encourage independence and practical skills  
-* Lead by example through actions  
-* Provide calm, steady support  
-* May struggle with expressing emotions verbally
-
-**Workplace Habits:**
-* Thrive in roles requiring hands-on problem-solving  
-* Prefer flexibility over strict structure  
-* Work best independently or in small teams  
-* Focused and efficient under pressure`
+      relationships: {
+        romantic: "Energetic and mentally stimulating partner. Needs freedom, variety, and playful debate. May resist emotional depth or long-term structure without novelty.",
+        friendships: "Draws in adventurous, curious minds. Debates for fun, explores everything, and inspires unconventional thinking in others.",
+        workplace: "Thrives in idea-driven roles. Needs freedom to innovate, dislikes micromanagement, and excels at brainstorming, pitching, and disruption."
+      }
+    }
   },
   {
-    typeCode: "ISFP",
-    title: "The Adventurer",
-    descriptionText: `Within the vibrant tapestries of Cipherhold, the ISFP shines as *The Adventurer* — a free-spirited artist and gentle soul who lives deeply in the present moment and embraces creativity with passion.
+    type: "ISTP",
+    title: "The Virtuoso — Tactician of the Gearworks",
+    description: {
+      explained: `Beneath Cipherhold’s grinding gears and shifting machinery, the ISTP — *The Virtuoso* — moves with calm precision. These hands-on tacticians thrive in the realm of motion, tools, and split-second choices. Quiet but courageous, they master chaos through action, not words.`,
 
-**The Adventurer’s Essence:**
-* Sensitive and imaginative, with a strong aesthetic sense  
-* Values personal freedom and authentic experiences  
-* Expresses feelings through art, music, or creative pursuits
+      coreMotivation: "To understand how things work and solve problems through action and skill.",
+      coreFear: "Being controlled, trapped, or restricted by routine and inefficiency.",
 
-**Strengths:**
-* Deeply empathetic and compassionate  
-* Spontaneous and open to new experiences  
-* Artistic and attuned to beauty  
-* Adaptable and quietly courageous
+      strengths: "Observant, practical, adaptable, action-oriented, calm under pressure.",
+      challenges: "Can be emotionally distant, impulsive, dislikes structure, may avoid long-term commitments.",
 
-**Weaknesses:**
-* Can be private and reserved, sometimes misunderstood  
-* Avoids conflict and confrontation  
-* May struggle with long-term planning or consistency  
-* Sensitive to criticism and rejection
+      idealCareers: [
+        { field: "Engineering & Mechanics", roles: ["Mechanical Engineer", "Industrial Designer", "Field Technician"] },
+        { field: "Trades & Craftsmanship", roles: ["Electrician", "Carpenter", "Automotive Technician", "Welding Specialist"] },
+        { field: "Emergency & Tactical", roles: ["Firefighter", "Paramedic", "Search and Rescue", "Military Operator"] },
+        { field: "Technology & IT", roles: ["Systems Support Specialist", "Technical Troubleshooter", "Cybersecurity Technician"] },
+        { field: "Transport & Exploration", roles: ["Pilot", "Commercial Diver", "Racecar Driver", "Motorcycle Courier"] },
+        { field: "Sports & Adventure", roles: ["Athlete", "Extreme Sports Instructor", "Outdoor Survivalist", "Stunt Performer"] }
+      ],
 
-**Careers Where The Adventurer Excels:**
-* Arts & Design (Visual, Performing, Music)  
-* Counseling & Therapy  
-* Nature and Environmental Fields  
-* Culinary Arts & Hospitality  
-* Healthcare & Supportive Roles  
-* Craftsmanship & Hands-on Work
+      communicationStyle: "Low-key, to-the-point, and action-driven. Prefers to show rather than tell, and often listens more than they speak.",
 
-**Romantic Relationships:**
-* Warm, loyal, and affectionate partners  
-* Show love through thoughtful gestures and presence  
-* Need space to explore individuality  
-* Seek harmony and emotional connection
-
-**Friendships:**
-* Value deep, meaningful bonds over quantity  
-* Enjoy shared creative or outdoor activities  
-* Supportive and attentive friends  
-* Prefer calm, peaceful environments
-
-**Parenthood:**
-* Nurture creativity and emotional awareness  
-* Encourage self-expression and independence  
-* Provide gentle guidance and love  
-* Focus on creating a safe, loving home
-
-**Workplace Habits:**
-* Thrive in flexible, low-pressure environments  
-* Prefer hands-on or creative tasks  
-* Work well independently or in small, close-knit teams  
-* Focus on quality and detail over speed`
+      relationships: {
+        romantic: "Shows affection through helpful actions and shared experiences. Loyal and private, needs space and independence.",
+        friendships: "Prefers a few close companions. Enjoys activities over deep emotional talks. Reliable in tough situations.",
+        workplace: "Best in hands-on, practical roles. Dislikes micromanagement and thrives in flexible, action-based environments."
+      }
+    }
   },
   {
-    typeCode: "ESTP",
-    title: "The Entrepreneur",
-    descriptionText: `Within the dynamic realms of Cipherhold, the ESTP emerges as *The Entrepreneur* — a bold and energetic doer who lives for action, thrives on excitement, and faces challenges head-on with pragmatism and charm.
+    type: "ISFP",
+    title: "The Adventurer — Artisan of the Living Canvas",
+    description: {
+      explained: `In Cipherhold’s kaleidoscopic district of fleeting beauty and gentle rhythms, the ISFP — *The Adventurer* — roams free. They are soulfully creative, driven by quiet passions and the need to live authentically. Where others follow structure, they flow — painting their truth in the colors of the present moment.`,
 
-**The Entrepreneur’s Essence:**
-* Energetic risk-taker and natural problem-solver  
-* Lives in the moment and loves hands-on experiences  
-* Charismatic and persuasive communicator
+      coreMotivation: "To express personal identity through meaningful experiences and creative freedom.",
+      coreFear: "Losing autonomy, being forced into conformity, or having their emotions invalidated.",
 
-**Strengths:**
-* Quick thinker and adaptable under pressure  
-* Confident and direct in communication  
-* Practical and resourceful in solving problems  
-* Socially skilled and enjoys networking
+      strengths: "Empathetic, artistic, spontaneous, adaptable, sensitive to beauty and emotion.",
+      challenges: "Avoids conflict, may be overly private, struggles with planning and criticism, inconsistent under pressure.",
 
-**Weaknesses:**
-* Can be impulsive and take unnecessary risks  
-* May struggle with long-term planning or patience  
-* Sometimes insensitive to others' feelings  
-* Avoids routine and detailed work
+      idealCareers: [
+        { field: "Arts & Design", roles: ["Painter", "Musician", "Photographer", "Graphic Designer", "Fashion Designer"] },
+        { field: "Culinary & Hospitality", roles: ["Chef", "Pastry Artist", "Barista", "Boutique Hotel Manager"] },
+        { field: "Counseling & Therapy", roles: ["Art Therapist", "Mental Health Counselor", "Rehabilitation Specialist"] },
+        { field: "Healthcare & Support", roles: ["Occupational Therapist", "Holistic Healer", "Veterinary Assistant"] },
+        { field: "Nature & Environment", roles: ["Park Ranger", "Wildlife Rehabilitator", "Florist", "Sustainability Advocate"] },
+        { field: "Craftsmanship & Freelance", roles: ["Jeweler", "Tattoo Artist", "Furniture Maker", "Freelance Creative"] }
+      ],
 
-**Careers Where The Entrepreneur Excels:**
-* Sales & Marketing  
-* Entrepreneurship & Business Development  
-* Emergency Services & Law Enforcement  
-* Sports & Physical Training  
-* Event Planning & Hospitality  
-* Skilled Trades & Technical Work
+      communicationStyle: "Quiet and gentle, often nonverbal. Communicates feelings best through creative mediums or meaningful actions.",
 
-**Romantic Relationships:**
-* Passionate and spontaneous partners  
-* Enjoy excitement and novelty in relationships  
-* Need freedom and space to pursue interests  
-* Express love through actions and experiences
-
-**Friendships:**
-* Sociable and outgoing companions  
-* Enjoy active, adventurous social activities  
-* Loyal but value fun and excitement  
-* Prefer a wide social circle with diverse contacts
-
-**Parenthood:**
-* Encourage independence and self-confidence  
-* Lead by example with energy and pragmatism  
-* Foster resilience and practical skills  
-* Provide lively, engaging family environments
-
-**Workplace Habits:**
-* Thrive in fast-paced, hands-on roles  
-* Prefer variety and challenges over routine  
-* Excel in crisis management and quick decisions  
-* Work well both independently and in teams`
+      relationships: {
+        romantic: "Affectionate and loyal, expresses love through presence and small, heartfelt acts. Needs personal space and emotional harmony.",
+        friendships: "Cherishes deep, one-on-one connections. Enjoys creative or outdoor bonding. Avoids drama, values kindness.",
+        workplace: "Prefers independent or artistic roles. Thrives in peaceful, supportive environments with room to express creativity."
+      }
+    }
   },
   {
-    typeCode: "ESFP",
-    title: "The Entertainer",
-    descriptionText: `Within the vibrant halls of Cipherhold, the ESFP shines as *The Entertainer* — a lively spirit who brings joy, energy, and warmth wherever they go, living fully in the present and connecting deeply with others through charisma and spontaneity.
+    type: "ESTP",
+    title: "The Entrepreneur — Dynamo of the Present Moment",
+    description: {
+      explained: `In Cipherhold’s bustling arenas of action and opportunity, the ESTP — *The Entrepreneur* — thrives. Bold and quick-witted, they live fully in the now, taking risks with charm and solving problems with practical savvy.`,
 
-**The Entertainer’s Essence:**
-* Outgoing and enthusiastic life of the party  
-* Highly observant and tuned into others’ emotions  
-* Loves sensory experiences and living in the moment
+      coreMotivation: "To experience life actively, master challenges immediately, and connect with others through action.",
+      coreFear: "Being trapped in routine, losing freedom, or being powerless to act.",
 
-**Strengths:**
-* Warm-hearted and generous  
-* Energetic and spontaneous  
-* Skilled at engaging and entertaining others  
-* Practical and realistic in everyday matters
+      strengths: "Energetic, adaptable, pragmatic, socially skilled, confident under pressure.",
+      challenges: "Impulsive, impatient, risk-prone, can overlook others’ feelings, dislikes routine tasks.",
 
-**Weaknesses:**
-* Can be easily bored or distracted  
-* Avoids deep or prolonged planning  
-* Sensitive to criticism and rejection  
-* Sometimes struggles with long-term commitments
+      idealCareers: [
+        { field: "Sales & Marketing", roles: ["Sales Representative", "Brand Ambassador", "Marketing Manager", "Real Estate Agent"] },
+        { field: "Entrepreneurship & Business", roles: ["Startup Founder", "Business Developer", "Franchise Owner", "Consultant"] },
+        { field: "Emergency & Law Enforcement", roles: ["Paramedic", "Firefighter", "Police Officer", "Security Specialist"] },
+        { field: "Sports & Physical Training", roles: ["Athlete", "Coach", "Personal Trainer", "Sports Therapist"] },
+        { field: "Event Planning & Hospitality", roles: ["Event Coordinator", "Hotel Manager", "Tour Guide", "Bartender"] },
+        { field: "Skilled Trades & Technical Work", roles: ["Electrician", "Mechanic", "Carpenter", "Technician"] }
+      ],
 
-**Careers Where The Entertainer Excels:**
-* Performing Arts & Entertainment  
-* Hospitality & Event Coordination  
-* Sales & Customer Service  
-* Teaching & Childcare  
-* Marketing & Public Relations  
-* Tourism & Travel Industry
+      communicationStyle: "Direct, engaging, and persuasive. Prefers face-to-face and action-driven conversations.",
 
-**Romantic Relationships:**
-* Passionate and affectionate partners  
-* Enjoy sharing fun and new experiences  
-* Value openness and emotional connection  
-* Prefer relationships full of excitement and laughter
-
-**Friendships:**
-* Loyal and warm-hearted friends  
-* Thrive in social, lively settings  
-* Quick to cheer others up and support  
-* Build strong bonds through shared adventures
-
-**Parenthood:**
-* Fun-loving and playful caregivers  
-* Encourage creativity and exploration  
-* Support emotional openness and expression  
-* Foster joyful and nurturing family life
-
-**Workplace Habits:**
-* Excel in collaborative and dynamic environments  
-* Prefer practical, hands-on tasks  
-* Communicate openly and enthusiastically  
-* Thrive when given freedom to be creative`
-  },
-   {
-    typeCode: "ISTJ",
-    title: "The Logistician",
-    descriptionText: `Deep within the marble archives of Cipherhold, the ISTJ — *The Logistician* — stands as a silent sentinel of order and tradition. With unwavering dedication and a methodical mind, the Logistician preserves the structures of society and upholds duty with quiet strength.
-
-**The Logistician’s Essence:**
-* Dependable guardian of logic and tradition  
-* Thrives on structure, consistency, and clarity  
-* Anchored in facts and responsible action
-
-**Strengths:**
-* Highly responsible and dependable  
-* Detail-oriented with excellent memory  
-* Practical, grounded, and organized  
-* Loyal and committed to duty
-
-**Weaknesses:**
-* Can be overly rigid or resistant to change  
-* May struggle to express emotions  
-* Prone to judgment or black-and-white thinking  
-* Dislikes inefficiency or disorder
-
-**Careers Where The Logistician Excels:**
-* Accounting & Finance  
-* Law Enforcement or Military Service  
-* Administrative & Office Management  
-* Civil Service & Government Work  
-* Data Analysis & Auditing  
-* Engineering (particularly industrial or mechanical)
-
-**Romantic Relationships:**
-* Steady and loyal partners  
-* Shows love through responsibility and actions  
-* Values stability and long-term commitment  
-* Needs patience when opening up emotionally
-
-**Friendships:**
-* Trustworthy and consistent companions  
-* Prefers a small circle of close friends  
-* Enjoys structured activities or shared goals  
-* Offers practical help over emotional support
-
-**Parenthood:**
-* Instills discipline and responsibility  
-* Provides clear expectations and rules  
-* Supports growth through consistency  
-* May need to work on emotional communication
-
-**Workplace Habits:**
-* Highly reliable and efficient team members  
-* Excels in structured, rule-based environments  
-* Focused on results, timelines, and accuracy  
-* May struggle in chaotic or unstructured teams`
+      relationships: {
+        romantic: "Passionate, spontaneous, and lively. Expresses love through shared experiences and freedom.",
+        friendships: "Outgoing and social, loves adventurous and active gatherings. Loyal but values fun and variety.",
+        workplace: "Excels in dynamic, hands-on environments. Thrives with variety and fast-paced challenges."
+      }
+    }
   },
   {
-    typeCode: "ISFJ",
-    title: "The Defender",
-    descriptionText: `Within the nurturing sanctums of Cipherhold, the ISFJ — *The Defender* — safeguards others with quiet strength and unwavering loyalty. They are the silent protectors of tradition, empathy, and service, blending kindness with responsibility in every act.
+    type: "ESFP",
+    title: "The Entertainer — The Heart of the Moment",
+    description: {
+      explained: `Within the vibrant halls of Cipherhold, the ESFP shines as *The Entertainer* — a lively spirit who brings joy, energy, and warmth wherever they go, living fully in the present and connecting deeply with others through charisma and spontaneity.`,
 
-**The Defender’s Essence:**
-* Gentle guardian devoted to duty and care  
-* Values harmony, loyalty, and tradition  
-* Leads with compassion, supports with structure
+      coreMotivation: "To experience life with enthusiasm, bring joy to others, and connect emotionally in the moment.",
+      coreFear: "Being ignored, missing out, or stuck in boring routines.",
 
-**Strengths:**
-* Deeply empathetic and observant  
-* Loyal and reliable, especially in crisis  
-* Hardworking and detail-oriented  
-* Excellent memory for people and facts
+      strengths: "Warm-hearted, energetic, spontaneous, observant, skilled at engaging others.",
+      challenges: "Easily bored, avoids long-term planning, sensitive to criticism, struggles with commitments.",
 
-**Weaknesses:**
-* May neglect their own needs  
-* Tends to avoid conflict, even at a cost  
-* Struggles with sudden change or uncertainty  
-* Can become overwhelmed by unspoken expectations
+      idealCareers: [
+        { field: "Performing Arts & Entertainment", roles: ["Actor", "Musician", "Dancer", "Comedian", "Event Performer"] },
+        { field: "Hospitality & Event Coordination", roles: ["Event Planner", "Hotel Manager", "Tour Guide", "Wedding Coordinator"] },
+        { field: "Sales & Customer Service", roles: ["Retail Salesperson", "Customer Relations Specialist", "Brand Ambassador"] },
+        { field: "Teaching & Childcare", roles: ["Early Childhood Educator", "Recreation Leader", "Special Needs Assistant"] },
+        { field: "Marketing & Public Relations", roles: ["Social Media Manager", "Public Relations Specialist", "Advertising Coordinator"] },
+        { field: "Tourism & Travel Industry", roles: ["Travel Agent", "Cruise Director", "Flight Attendant"] }
+      ],
 
-**Careers Where The Defender Excels:**
-* Nursing & Healthcare  
-* Social Work & Counseling  
-* Education & Childcare  
-* Administrative Support  
-* Human Resources  
-* Customer Service  
-* Museum or Library Science
+      communicationStyle: "Expressive, enthusiastic, and warm; excels at connecting emotionally and entertaining others.",
 
-**Romantic Relationships:**
-* Deeply committed and attentive partners  
-* Expresses love through actions and thoughtfulness  
-* Values harmony, stability, and emotional safety  
-* May struggle to voice their own emotional needs
-
-**Friendships:**
-* Loyal and generous with time and energy  
-* Tends to form long-lasting bonds  
-* Great listeners, dependable supporters  
-* Can feel unappreciated if not reciprocated
-
-**Parenthood:**
-* Highly nurturing and protective  
-* Fosters strong values and responsibility  
-* Creates a warm, structured home life  
-* Sensitive to their children's emotional worlds
-
-**Workplace Habits:**
-* Works steadily and thoroughly behind the scenes  
-* Prefers clearly defined roles and tasks  
-* Devoted to teamwork and keeping peace  
-* Shines in roles that require care and precision`
+      relationships: {
+        romantic: "Passionate and affectionate; thrives on excitement, fun, and emotional openness.",
+        friendships: "Loyal and lively; enjoys social adventures and uplifting others.",
+        workplace: "Collaborative and dynamic; prefers practical, hands-on roles with creative freedom."
+      }
+    }
   },
   {
-    typeCode: "ESTJ",
-    title: "The Executive",
-    descriptionText: `In the structured vaults of Cipherhold, the ESTJ — *The Executive* — stands as the embodiment of order, discipline, and leadership. These are the tacticians of the physical realm, forging stability through rules, efficiency, and unwavering commitment.
+    type: "ISTJ",
+    title: "The Logistician — The Reliable Organizer",
+    description: {
+      explained: `Deep within the marble archives of Cipherhold, the ISTJ — *The Logistician* — stands as a silent sentinel of order and tradition. With unwavering dedication and a methodical mind, the Logistician preserves the structures of society and upholds duty with quiet strength.`,
 
-**The Executive’s Essence:**
-* Natural leader who values tradition and authority  
-* Practical and decisive in implementing systems  
-* Commands with confidence and logic
+      coreMotivation: "To maintain order, uphold responsibility, and preserve traditions.",
+      coreFear: "Being seen as unreliable or failing to meet obligations.",
 
-**Strengths:**
-* Highly organized and reliable  
-* Strong sense of duty and justice  
-* Excellent at managing people and projects  
-* Confident in decision-making and delegation
+      strengths: "Highly responsible, dependable, detail-oriented, practical, organized, loyal.",
+      challenges: "Rigid to change, struggles with emotional expression, black-and-white thinking, dislikes inefficiency.",
 
-**Weaknesses:**
-* Can be inflexible or overly critical  
-* May overlook emotional nuance in others  
-* Dislikes inefficiency and ambiguity  
-* Sometimes too focused on rules and tradition
+      idealCareers: [
+        { field: "Accounting & Finance", roles: ["Accountant", "Auditor", "Financial Analyst"] },
+        { field: "Law Enforcement & Military", roles: ["Police Officer", "Military Officer", "Detective"] },
+        { field: "Administration & Office Management", roles: ["Office Manager", "Executive Assistant", "Operations Coordinator"] },
+        { field: "Civil Service & Government", roles: ["Government Administrator", "Regulatory Compliance Officer"] },
+        { field: "Data & Analysis", roles: ["Data Analyst", "Quality Control Specialist"] },
+        { field: "Engineering", roles: ["Industrial Engineer", "Mechanical Engineer"] }
+      ],
 
-**Careers Where The Executive Excels:**
-* Business Management & Administration  
-* Law Enforcement & Military  
-* Politics & Government  
-* Financial Services  
-* Project Management  
-* Logistics & Operations  
-* School Principals or Coaches
+      communicationStyle: "Clear, factual, and straightforward; values precision and responsibility.",
 
-**Romantic Relationships:**
-* Loyal and dependable partners  
-* Values stability and shared goals  
-* Expresses love through commitment and action  
-* Can struggle with emotional sensitivity
-
-**Friendships:**
-* Takes friendships seriously  
-* Likely to be the planner and coordinator  
-* Offers practical help and advice  
-* May clash with less structured types
-
-**Parenthood:**
-* Sets clear expectations and structure  
-* Teaches responsibility and work ethic  
-* Protects and provides steadfastly  
-* May need to work on emotional openness
-
-**Workplace Habits:**
-* Thrives in leadership and decision-making roles  
-* Creates order and clarity for teams  
-* Respects hierarchy and duty  
-* Expects high performance from self and others`
+      relationships: {
+        romantic: "Steady and loyal; shows love through dependable actions; values stability and long-term commitment.",
+        friendships: "Trustworthy and consistent; prefers small close-knit groups; offers practical support over emotional.",
+        workplace: "Highly reliable in structured, rule-based environments; focused on accuracy and results."
+      }
+    }
   },
   {
-    typeCode: "ESFJ",
-    title: "The Consul",
-    descriptionText: `Within the harmonious chambers of Cipherhold resides the ESFJ — *The Consul* — the nurturer and connector of social webs. These empathetic caretakers thrive by fostering community, supporting others, and upholding traditions.
+    type: "ISFJ",
+    title: "The Defender — The Loyal Protector",
+    description: {
+      explained: `Within the nurturing sanctums of Cipherhold, the ISFJ — *The Defender* — safeguards others with quiet strength and unwavering loyalty. They are the silent protectors of tradition, empathy, and service, blending kindness with responsibility in every act.`,
 
-**The Consul’s Essence:**
-* Warm-hearted and sociable, energized by helping others  
-* Skilled at organizing social events and gatherings  
-* Values harmony, cooperation, and loyalty
+      coreMotivation: "To protect and care for others while maintaining harmony and tradition.",
+      coreFear: "Failing to meet the needs of those they care about or disrupting harmony.",
 
-**Strengths:**
-* Highly empathetic and attentive to others’ needs  
-* Reliable and conscientious team player  
-* Excellent at creating supportive environments  
-* Strong sense of duty and responsibility
+      strengths: "Deeply empathetic, observant, loyal, hardworking, detail-oriented, reliable.",
+      challenges: "May neglect own needs, avoid conflict, struggle with sudden change, overwhelmed by unspoken expectations.",
 
-**Weaknesses:**
-* Can be overly sensitive to criticism  
-* May struggle to say no or set boundaries  
-* Sometimes seeks approval at the expense of self  
-* Can resist change to preserve traditions
+      idealCareers: [
+        { field: "Healthcare & Nursing", roles: ["Nurse", "Medical Assistant", "Caregiver"] },
+        { field: "Social Work & Counseling", roles: ["Social Worker", "Therapist", "Counselor"] },
+        { field: "Education & Childcare", roles: ["Teacher", "Childcare Provider", "School Counselor"] },
+        { field: "Administrative Support", roles: ["Administrative Assistant", "Office Coordinator"] },
+        { field: "Human Resources", roles: ["HR Specialist", "Recruiter"] },
+        { field: "Museum & Library Science", roles: ["Librarian", "Archivist", "Curator"] }
+      ],
 
-**Careers Where The Consul Excels:**
-* Healthcare & Nursing  
-* Teaching & Education  
-* Social Work & Counseling  
-* Customer Service & Hospitality  
-* Event Planning & Coordination  
-* Human Resources  
-* Religious & Community Leadership
+      communicationStyle: "Kind, thoughtful, supportive; prefers clear but gentle communication.",
 
-**Romantic Relationships:**
-* Devoted and caring partners  
-* Express love through thoughtful actions  
-* Seek harmony and emotional connection  
-* May prioritize others over self-care
+      relationships: {
+        romantic: "Deeply committed and attentive; expresses love through actions and care; values stability and emotional safety.",
+        friendships: "Loyal and generous; forms long-lasting bonds; great listener and dependable supporter.",
+        workplace: "Works steadily and thoroughly; prefers defined roles and teamwork; excels in supportive, detail-focused roles."
+      }
+    }
+  },
+  {
+    type: "ESTJ",
+    title: "The Executive — The Orderly Leader",
+    description: {
+      explained: `In the structured vaults of Cipherhold, the ESTJ — *The Executive* — stands as the embodiment of order, discipline, and leadership. These are the tacticians of the physical realm, forging stability through rules, efficiency, and unwavering commitment.`,
 
-**Friendships:**
-* Loyal and dependable friends  
-* Thrive in close-knit social circles  
-* Act as mediators and peacekeepers  
-* Enjoy celebrating milestones together
+      coreMotivation: "To lead effectively, maintain order, and ensure responsibility is upheld.",
+      coreFear: "Chaos, inefficiency, and failure to meet obligations or standards.",
 
-**Parenthood:**
-* Nurturing and protective caregivers  
-* Focus on teaching values and social skills  
-* Provide structure with warmth and encouragement  
-* May need to balance care with independence
+      strengths: "Highly organized, reliable, strong sense of duty, decisive, excellent at managing people and projects, confident leader.",
+      challenges: "Can be inflexible, overly critical, overlooks emotional nuances, too focused on rules and tradition.",
 
-**Workplace Habits:**
-* Excel in cooperative and team-oriented settings  
-* Bring warmth and morale to the workplace  
-* Detail-oriented and organized  
-* Skilled at managing interpersonal dynamics`
+      idealCareers: [
+        { field: "Business Management & Administration", roles: ["Operations Manager", "Business Executive", "Administrator"] },
+        { field: "Law Enforcement & Military", roles: ["Police Officer", "Military Officer", "Investigator"] },
+        { field: "Politics & Government", roles: ["Politician", "Government Official", "Public Administrator"] },
+        { field: "Financial Services", roles: ["Financial Manager", "Accountant", "Loan Officer"] },
+        { field: "Project Management", roles: ["Project Manager", "Program Coordinator"] },
+        { field: "Logistics & Operations", roles: ["Logistics Manager", "Supply Chain Coordinator"] },
+        { field: "Education", roles: ["School Principal", "Coach"] }
+      ],
+
+      communicationStyle: "Direct, clear, and authoritative; values efficiency and practical solutions.",
+
+      relationships: {
+        romantic: "Loyal and dependable; shows love through commitment and practical support; may struggle with emotional sensitivity.",
+        friendships: "Serious about friendships; often the planner and organizer; offers practical advice; may clash with more flexible types.",
+        workplace: "Thrives in leadership roles; creates order and clarity; respects hierarchy; demands high performance."
+      }
+    }
+  },
+  {
+    type: "ESFJ",
+    title: "The Consul — The Caring Connector",
+    description: {
+      explained: `Within the harmonious chambers of Cipherhold resides the ESFJ — *The Consul* — the nurturer and connector of social webs. These empathetic caretakers thrive by fostering community, supporting others, and upholding traditions.`,
+
+      coreMotivation: "To help others, maintain harmony, and uphold social traditions.",
+      coreFear: "Being rejected, isolated, or causing discord within their social circle.",
+
+      strengths: "Highly empathetic, attentive to others' needs, reliable, conscientious, excellent at creating supportive environments, strong sense of duty.",
+      challenges: "Overly sensitive to criticism, difficulty setting boundaries, seeks approval sometimes at own expense, resistant to change.",
+
+      idealCareers: [
+        { field: "Healthcare & Nursing", roles: ["Nurse", "Medical Assistant", "Caregiver"] },
+        { field: "Teaching & Education", roles: ["Teacher", "School Counselor", "Educational Coordinator"] },
+        { field: "Social Work & Counseling", roles: ["Social Worker", "Counselor", "Therapist"] },
+        { field: "Customer Service & Hospitality", roles: ["Customer Service Representative", "Hotel Manager", "Event Planner"] },
+        { field: "Event Planning & Coordination", roles: ["Event Coordinator", "Wedding Planner"] },
+        { field: "Human Resources", roles: ["HR Specialist", "Recruiter"] },
+        { field: "Religious & Community Leadership", roles: ["Community Organizer", "Religious Leader"] }
+      ],
+
+      communicationStyle: "Warm, clear, and enthusiastic; focused on cooperation and encouragement.",
+
+      relationships: {
+        romantic: "Devoted and caring; expresses love through thoughtful actions; seeks emotional harmony; may prioritize partner's needs over their own.",
+        friendships: "Loyal and dependable; thrives in close-knit groups; acts as mediator and peacekeeper; enjoys celebrating milestones together.",
+        workplace: "Excels in cooperative, team-oriented environments; brings warmth and boosts morale; detail-oriented and skilled at interpersonal management."
+      }
+    }
   },
   //DIPLOMATS
   {
-  typeCode: "INFJ",
-  title: "The Advocate",
-  descriptionText: `In the luminous sanctum of Cipherhold’s Heartcore Archives resides the INFJ — *The Advocate*. A rare and enigmatic force, the Advocate bridges logic and emotion, vision and action. Guided by deep conviction and quiet strength, they are the dream-weavers and soul-healers of their time.
+    type: "INFJ",
+    title: "The Advocate — The Visionary Idealist",
+    description: {
+      explained: `In the luminous sanctum of Cipherhold’s Heartcore Archives resides the INFJ — *The Advocate*. A rare and enigmatic force, the Advocate bridges logic and emotion, vision and action. Guided by deep conviction and quiet strength, they are the dream-weavers and soul-healers of their time.`,
 
-**The Advocate’s Essence:**  
-* Visionary idealist with a profound inner life  
-* Driven by purpose, empathy, and insight  
-* Balances intuition with structured action
+      coreMotivation: "To pursue purpose, empathy, and meaningful impact.",
+      coreFear: "Being misunderstood, insignificant, or disconnected from their vision.",
 
-**Strengths:**  
-* Deeply empathetic and emotionally intelligent  
-* Insightful and inspiring  
-* Organized, determined, and committed to causes  
-* Excellent listener and thoughtful communicator
+      strengths: "Deeply empathetic, emotionally intelligent, insightful, inspiring, organized, determined, excellent listener and communicator.",
+      challenges: "Carries others' emotional burdens, perfectionistic, may withdraw when overwhelmed, struggles with opening up or asking for help.",
 
-**Weaknesses:**  
-* Tends to carry others' emotional burdens  
-* Can be overly perfectionistic  
-* May withdraw when overwhelmed  
-* Struggles with opening up or asking for help
+      idealCareers: [
+        { field: "Counseling & Therapy", roles: ["Therapist", "Counselor", "Psychologist"] },
+        { field: "Writing & Storytelling", roles: ["Author", "Screenwriter", "Journalist"] },
+        { field: "Human Rights & Nonprofit Leadership", roles: ["Advocate", "Program Director"] },
+        { field: "Psychology & Social Work", roles: ["Social Worker", "Mental Health Specialist"] },
+        { field: "Education & Guidance", roles: ["Teacher", "Mentor", "Advisor"] },
+        { field: "Spiritual Leadership & Coaching", roles: ["Spiritual Leader", "Life Coach"] },
+        { field: "Design & Creative Arts", roles: ["Designer", "Artist"] },
+        { field: "Diplomacy & International Relations", roles: ["Diplomat", "Policy Analyst"] }
+      ],
 
-**Careers Where The Advocate Excels:**  
-* Counseling & Therapy  
-* Writing & Storytelling  
-* Human Rights & Nonprofit Leadership  
-* Psychology & Social Work  
-* Education & Guidance  
-* Spiritual Leadership or Coaching  
-* Design & Creative Arts  
-* Diplomacy & International Relations
+      communicationStyle: "Thoughtful, insightful, and empathetic; balances vision with clarity.",
 
-**Romantic Relationships:**  
-* Seeks depth, authenticity, and soul connection  
-* Loyal and nurturing once trust is built  
-* Can be slow to open up  
-* Idealistic and attentive partners
+      relationships: {
+        romantic: "Seeks depth and authenticity; loyal and nurturing once trust is built; can be slow to open up; idealistic and attentive.",
+        friendships: "Loyal to a few; prefers meaningful one-on-one connections; dislikes small talk; deeply supportive and insightful.",
+        workplace: "Committed, conscientious, prefers mission-driven work; focused, independent, and quietly efficient."
+      }
+    }
+  },
+  {
+    type: "INFP",
+    title: "The Mediator — The Poetic Idealist",
+    description: {
+      explained: `From the quiet gardens of Cipherhold’s Inner Realms comes the INFP — *The Mediator*. A poetic soul cloaked in idealism, the Mediator journeys through life guided by personal values, imagination, and a desire to heal and inspire others through authenticity.`,
 
-**Friendships:**  
-* Loyal to a chosen few  
-* Drawn to meaningful one-on-one connections  
-* Dislikes small talk, craves purpose in interactions  
-* Deeply supportive and insightful confidants
+      coreMotivation: "To live authentically in alignment with values and inspire harmony.",
+      coreFear: "Compromising personal values or losing emotional depth and connection.",
 
-**Parenthood:**  
-* Encourages emotional awareness and values  
-* Protects children’s individuality and dreams  
-* Teaches empathy and morality  
-* May struggle with enforcing tough discipline
+      strengths: "Deeply empathetic, compassionate, creative, original thinker, open-minded, introspective, passionate about causes.",
+      challenges: "Struggles with practical matters, easily overwhelmed by conflict, tends to withdraw under pressure, may idealize people or situations.",
 
-**Workplace Habits:**  
-* Committed and conscientious team player  
-* Prefers meaningful, mission-driven work  
-* Focused, independent, and quietly efficient  
-* Brings harmony and vision to any project`
-},
-{
-  typeCode: "INFP",
-  title: "The Mediator",
-  descriptionText: `From the quiet gardens of Cipherhold’s Inner Realms comes the INFP — *The Mediator*. A poetic soul cloaked in idealism, the Mediator journeys through life guided by personal values, imagination, and a desire to heal and inspire others through authenticity.
+      idealCareers: [
+        { field: "Writing, Poetry & Creative Arts", roles: ["Writer", "Poet", "Artist"] },
+        { field: "Psychology & Counseling", roles: ["Counselor", "Therapist"] },
+        { field: "Social Work & Nonprofit Activism", roles: ["Social Worker", "Activist"] },
+        { field: "Education & Youth Development", roles: ["Teacher", "Youth Counselor"] },
+        { field: "Music & Film", roles: ["Musician", "Filmmaker"] },
+        { field: "Humanitarian Work", roles: ["Humanitarian", "Charity Organizer"] },
+        { field: "Spiritual & Holistic Practices", roles: ["Spiritual Healer", "Holistic Practitioner"] },
+        { field: "UX/UI Design", roles: ["UX Designer", "UI Designer"] }
+      ],
 
-**The Mediator’s Essence:**  
-* Gentle idealist with a vivid inner world  
-* Fueled by values, meaning, and personal truth  
-* Seeks harmony, purpose, and emotional depth
+      communicationStyle: "Gentle, sincere, and imaginative; seeks to connect through shared values and stories.",
 
-**Strengths:**  
-* Deeply empathetic and compassionate  
-* Creative and original thinkers  
-* Open-minded and introspective  
-* Passionate about causes they believe in
+      relationships: {
+        romantic: "Deeply loyal and romantic; seeks soul-deep emotional connections; may hesitate to open up; needs space for inner world.",
+        friendships: "Thoughtful, sincere, cherishes deep conversations; often a quiet supporter; selective but loyal for life.",
+        workplace: "Values-driven and idealistic; prefers supportive, flexible environments; thrives in collaboration and vision-driven roles."
+      }
+    }
+  },
+  {
+    type: "ENFJ",
+    title: "The Protagonist — The Inspiring Leader",
+    description: {
+      explained: `In the radiant forums of Cipherhold’s Grand Halls stands the ENFJ — *The Protagonist*. A born leader illuminated by empathy and purpose, the Protagonist channels charisma, intuition, and idealism to uplift others and guide them toward their fullest potential.`,
 
-**Weaknesses:**  
-* Can struggle with practical matters  
-* Easily overwhelmed by conflict or criticism  
-* Tends to withdraw under pressure  
-* May idealize people or situations
+      coreMotivation: "To inspire, connect, and lead others toward positive growth.",
+      coreFear: "Being unappreciated or failing to live up to their ideals.",
 
-**Careers Where The Mediator Excels:**  
-* Writing, Poetry, and Creative Arts  
-* Psychology & Counseling  
-* Social Work or Nonprofit Activism  
-* Education & Youth Development  
-* Music & Film  
-* Humanitarian Work  
-* Spiritual or Holistic Practices  
-* UX/UI Design with a human-centered focus
+      strengths: "Charismatic, articulate, passionate mentor, organized, future-focused, loyal, inspiring.",
+      challenges: "May overextend for others, prone to burnout, overly idealistic, sensitive to conflict or criticism.",
 
-**Romantic Relationships:**  
-* Deeply loyal and romantic dreamers  
-* Seeks soul-deep emotional connections  
-* May hesitate to open up at first  
-* Needs space and understanding for their inner world
+      idealCareers: [
+        { field: "Counseling & Therapy", roles: ["Therapist", "Counselor"] },
+        { field: "Teaching & Educational Leadership", roles: ["Teacher", "School Administrator"] },
+        { field: "Politics & Public Service", roles: ["Politician", "Community Organizer"] },
+        { field: "Human Resources & Team Development", roles: ["HR Manager", "Coach"] },
+        { field: "Nonprofit Leadership & Activism", roles: ["Director", "Advocate"] },
+        { field: "Life Coaching & Motivational Speaking", roles: ["Life Coach", "Speaker"] },
+        { field: "Religious & Spiritual Leadership", roles: ["Clergy", "Spiritual Leader"] },
+        { field: "Marketing with Human Focus", roles: ["Marketing Manager", "Brand Strategist"] }
+      ],
 
-**Friendships:**  
-* Thoughtful and sincere companions  
-* Cherishes deep, meaningful conversations  
-* Often the quiet supporter behind others’ growth  
-* Selective, but loyal for life
+      communicationStyle: "Empathetic, motivating, articulate; inspires through connection and vision.",
 
-**Parenthood:**  
-* Encourages creativity and emotional expression  
-* Leads with gentle guidance and deep love  
-* Teaches empathy and authenticity  
-* May struggle with enforcing structure
+      relationships: {
+        romantic: "Deeply loving and nurturing; committed to partner’s growth; needs emotional reciprocity; may take on too much responsibility.",
+        friendships: "Acts as social glue and moral compass; forms strong bonds; consistently supportive; empowers others.",
+        workplace: "Natural motivators and organizers; builds team harmony and purpose; takes initiative with empathy."
+      }
+    }
+  },
+  {
+    type: "ENFP",
+    title: "The Campaigner — The Enthusiastic Visionary",
+    description: {
+      explained: `In the vibrant and ever-shifting plazas of Cipherhold, the ENFP — *The Campaigner* — thrives as a beacon of possibility. Bursting with curiosity, emotion, and vision, the Campaigner ignites change and connection wherever they go, led by a fierce belief in the beauty of human potential.`,
 
-**Workplace Habits:**  
-* Values-driven and idealistic contributor  
-* Prefers supportive and flexible work environments  
-* Flourishes in roles that align with personal mission  
-* Avoids competition; thrives through collaboration and vision`
-},
-{
-  typeCode: "ENFJ",
-  title: "The Protagonist",
-  descriptionText: `In the radiant forums of Cipherhold’s Grand Halls stands the ENFJ — *The Protagonist*. A born leader illuminated by empathy and purpose, the Protagonist channels charisma, intuition, and idealism to uplift others and guide them toward their fullest potential.
+      coreMotivation: "To explore possibilities, inspire others, and live authentically.",
+      coreFear: "Being trapped in routine or losing their individuality.",
 
-**The Protagonist’s Essence:**  
-* Inspiring leader and compassionate guide  
-* Deeply in tune with emotions — theirs and others’  
-* Driven by vision, connection, and positive impact
+      strengths: "Creative, enthusiastic, empathetic, socially insightful, natural storyteller, adaptable, values-driven.",
+      challenges: "Easily distracted, struggles with follow-through, takes criticism personally, prone to burnout.",
 
-**Strengths:**  
-* Charismatic and articulate communicator  
-* Passionate about helping and mentoring others  
-* Organized and future-focused  
-* Loyal, inspiring, and deeply committed
+      idealCareers: [
+        { field: "Creative Arts", roles: ["Writer", "Actor", "Designer"] },
+        { field: "Psychology & Counseling", roles: ["Counselor", "Therapist"] },
+        { field: "Public Relations & Communications", roles: ["PR Specialist", "Communicator"] },
+        { field: "Entrepreneurship & Startups", roles: ["Founder", "Innovator"] },
+        { field: "Marketing & Advertising", roles: ["Marketer", "Advertiser"] },
+        { field: "Social Work & Community Organizing", roles: ["Social Worker", "Organizer"] },
+        { field: "Teaching", roles: ["Teacher", "Creative Educator"] }
+      ],
 
-**Weaknesses:**  
-* May overextend themselves for others  
-* Prone to burnout from constant caregiving  
-* Can struggle with being overly idealistic  
-* Sensitivity to conflict or criticism
+      communicationStyle: "Energetic, imaginative, warm; connects through stories and values.",
 
-**Careers Where The Protagonist Excels:**  
-* Counseling & Therapy  
-* Teaching & Educational Leadership  
-* Politics & Public Service  
-* Human Resources & Team Development  
-* Nonprofit Leadership & Activism  
-* Life Coaching or Motivational Speaking  
-* Religious or Spiritual Leadership  
-* Marketing with a human-centric approach
-
-**Romantic Relationships:**  
-* Deeply loving, expressive, and nurturing  
-* Committed to helping their partner grow  
-* Needs emotional reciprocity and appreciation  
-* May take on too much responsibility in the relationship
-
-**Friendships:**  
-* Social glue and moral compass in any group  
-* Easily forms strong bonds  
-* Shows up consistently for loved ones  
-* Empowers others through belief and encouragement
-
-**Parenthood:**  
-* Supportive and warm role models  
-* Leads by example with high values  
-* Prioritizes emotional development and kindness  
-* May struggle with being too protective or perfectionistic
-
-**Workplace Habits:**  
-* Natural motivators and organizers  
-* Builds harmony and purpose within teams  
-* Takes initiative with empathy  
-* Needs roles where people, values, and vision intersect`
-},
-{
-  typeCode: "ENFP",
-  title: "The Campaigner",
-  descriptionText: `In the vibrant and ever-shifting plazas of Cipherhold, the ENFP — *The Campaigner* — thrives as a beacon of possibility. Bursting with curiosity, emotion, and vision, the Campaigner ignites change and connection wherever they go, led by a fierce belief in the beauty of human potential.
-
-**The Campaigner’s Essence:**  
-* Energetic and imaginative explorer of ideas  
-* Seeker of deep emotional truths and authentic bonds  
-* Drawn to meaningful experiences and personal growth
-
-**Strengths:**  
-* Exceptionally creative and enthusiastic  
-* Empathetic, warm, and socially insightful  
-* Natural storytellers and communicators  
-* Adaptable and driven by inner values
-
-**Weaknesses:**  
-* Easily distracted by new ideas and possibilities  
-* May struggle with follow-through or routine  
-* Can take criticism personally  
-* Prone to emotional overwhelm or burnout
-
-**Careers Where The Campaigner Excels:**  
-* Creative Arts (Writing, Acting, Design)  
-* Psychology & Counseling  
-* Public Relations & Communications  
-* Entrepreneurship & Startups  
-* Marketing & Advertising  
-* Social Work or Community Organizing  
-* Teaching (especially in creative or alternative environments)
-
-**Romantic Relationships:**  
-* Passionate, expressive, and deeply affectionate  
-* Craves emotional and intellectual connection  
-* Brings adventure and spontaneity into love  
-* Needs freedom and understanding in return
-
-**Friendships:**  
-* The life of the party and the heart of the group  
-* Creates strong emotional bonds  
-* Loves exploring ideas and possibilities with others  
-* Uplifts and inspires friends with idealism
-
-**Parenthood:**  
-* Encourages curiosity and individuality  
-* Creates a fun, nurturing, and creative home  
-* Empowers children to think freely and feel deeply  
-* Needs to balance freedom with structure
-
-**Workplace Habits:**  
-* Brings energy, ideas, and harmony to any team  
-* Seeks roles with flexibility and meaning  
-* Motivated by passion over profit  
-* Thrives when allowed to innovate and connect`
-}
-
+      relationships: {
+        romantic: "Passionate and affectionate; craves emotional and intellectual connection; brings spontaneity; needs freedom and understanding.",
+        friendships: "Life of the party; creates strong emotional bonds; loves exploring ideas; uplifts and inspires friends.",
+        workplace: "Brings energy and ideas; seeks meaningful, flexible roles; motivated by passion; thrives when innovating and connecting."
+      }
+    }
+  }
 ]
 
 async function seedMBTI() {
