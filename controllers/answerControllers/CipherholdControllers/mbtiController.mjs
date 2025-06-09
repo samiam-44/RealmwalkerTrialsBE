@@ -1,5 +1,5 @@
-import MBTI from '../../models/AnswerModels/MBTImodel.mjs';
-import { MBTIResult } from '../../logic/mbti.mjs';
+import MBTI from '../../../models/AnswerModels/CipherholdModels/MBTImodel.mjs';
+import { MBTIResult } from '../../../logic/CipherholdLogic/mbti.mjs';
 
 export async function calculateMBTIResult(req, res) {
   try {

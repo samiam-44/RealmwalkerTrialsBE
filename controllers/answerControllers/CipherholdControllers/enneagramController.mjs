@@ -1,6 +1,6 @@
-import Question from '../../models/Question.mjs';
-import EnneagramResult from '../../models/AnswerModels/EnneagramModel.mjs';
-import { calculateEnneagramScore } from '../../logic/enneagram.mjs';
+import Question from '../../../models/Question.mjs';
+import EnneagramResult from '../../../models/AnswerModels/CipherholdModels/EnneagramModel.mjs';
+import { calculateEnneagramScore } from '../../../logic/CipherholdLogic/Enneagram.mjs';
 
 // Get Enneagram questions
 export const getEnneagramQuestions = async (req, res) => {

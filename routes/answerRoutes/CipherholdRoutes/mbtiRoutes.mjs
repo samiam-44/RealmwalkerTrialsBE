@@ -1,5 +1,5 @@
 import express from 'express';
-import { calculateMBTIResult } from '../../controllers/answerControllers/mbtiController.mjs';
+import { calculateMBTIResult } from '../../../controllers/answerControllers/CipherholdControllers/mbtiController.mjs';
 
 const router = express.Router();
 

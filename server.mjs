@@ -2,8 +2,8 @@ import express from 'express';
 import dotenv from 'dotenv';
 import connectDB from './db/conn.mjs';
 import User from './models/User.mjs';
-import enneagramRoutes from './routes/answerRoutes/enneagramRoutes.mjs'
-import mbtiRoutes from './routes/answerRoutes/mbtiRoutes.mjs'
+import enneagramRoutes from './routes/answerRoutes/CipherholdRoutes/enneagramRoutes.mjs'
+import mbtiRoutes from './routes/answerRoutes/CipherholdRoutes/mbtiRoutes.mjs'
 
 
 //ROUTE IMPORTS

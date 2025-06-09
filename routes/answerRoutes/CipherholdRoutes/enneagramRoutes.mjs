@@ -1,5 +1,5 @@
 import express from 'express';
-import { getEnneagramQuestions, calculateEnneagramResult } from '../../controllers/answerControllers/enneagramController.mjs';
+import { getEnneagramQuestions, calculateEnneagramResult } from '../../controllers/answerControllers/CipherholdControllers/enneagramController.mjs';
 
 const router = express.Router();
 

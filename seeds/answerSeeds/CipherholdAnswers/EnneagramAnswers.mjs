@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-import connectDB from '../../db/conn.mjs';
-import EnneagramResult from '../../models/AnswerModels/EnneagramModel.mjs';
+import connectDB from '../../../db/conn.mjs';
+import EnneagramResult from '../../../models/AnswerModels/CipherholdModels/EnneagramModel.mjs';
 
 dotenv.config();
 await connectDB();

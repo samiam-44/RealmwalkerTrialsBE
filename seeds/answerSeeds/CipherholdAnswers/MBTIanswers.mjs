@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
-import MBTI from '../../models/AnswerModels/MBTImodel.mjs';
-import connectDB from '../../db/conn.mjs'
+import MBTI from '../../../models/AnswerModels/CipherholdModels/MBTImodel.mjs';
+import connectDB from '../../../db/conn.mjs'
 import dotenv from 'dotenv'
 
 dotenv.config();

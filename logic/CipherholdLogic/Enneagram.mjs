@@ -1,5 +1,5 @@
-import Question from '../models/Question.mjs'; 
-import EnneagramResult from '../models/AnswerModels/EnneagramModel.mjs';
+import Question from '../../models/Question.mjs'; 
+import EnneagramResult from '../../models/AnswerModels/CipherholdModels/EnneagramModel.mjs';
 
 // This function takes user answers and calculates their Enneagram type
 export async function calculateEnneagramScore(answers) {
