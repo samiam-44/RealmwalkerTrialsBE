@@ -5,15 +5,25 @@ import {
   getAllEnneagramDescriptions,
   getUserEnneagramResults,
   saveEnneagramResult
-} from '../../../controllers/answerControllers/CipherholdControllers/enneagramControllers.mjs';
+} from '../../../controllers/answerControllers/CipherholdControllers/enneagramController.mjs';
 
 const router = express.Router();
 
+// get all enneagram q's
 router.get('/enneagram/questions', getEnneagramQuestions);
+
+// submmit ansrs + get type
 router.post('/enneagram/submit', calculateEnneagramResult);
+
+// get descs for all types
 router.get('/enneagram/descriptions', getAllEnneagramDescriptions);
-router.get('/enneagram/results/:userId', getUserEnneagramResults); // Optional, if you save user results
-router.post('/enneagram/save-result', saveEnneagramResult); // Optional, to save user result
+
+// get user's past results
+router.get('/enneagram/results/:userId', getUserEnneagramResults);
+
+// save result to db
+router.post('/enneagram/save-result', saveEnneagramResult);
 
 export default router;
+
 

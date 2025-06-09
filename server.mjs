@@ -22,7 +22,7 @@ connectDB()
 app.use('/api/realms', realmRoutes);
 app.use('/api/quizzes', quizRoutes);
 app.use('/api', enneagramRoutes);
-app.use('/api/tests/mbti', mbtiRoutes);
+app.use('/api', mbtiRoutes);
 
 
 // ROOT ROUTE

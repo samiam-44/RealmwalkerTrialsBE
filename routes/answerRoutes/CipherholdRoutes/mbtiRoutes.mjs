@@ -1,8 +1,28 @@
 import express from 'express';
-import { calculateMBTIResult } from '../../../controllers/answerControllers/CipherholdControllers/mbtiController.mjs';
+import {
+  getMBTIQuestions,
+  calculateMBTIResult,
+  getMBTIDescriptions,
+  getMBTIResultById,
+  saveMBTIResult
+} from '../../../controllers/answerControllers/CipherholdControllers/mbtiController.mjs';
 
 const router = express.Router();
-router.post('/submit', calculateMBTIResult);
 
+// get all mbti q's
+router.get('/mbti/questions', getMBTIQuestions);
+
+// submmit ansrs + get result
+router.post('/mbti/submit', calculateMBTIResult);
+
+// get all type descs
+router.get('/mbti/descriptions', getMBTIDescriptions);
+
+// get result by _id
+router.get('/mbti/results/:id', getMBTIResultById);
+
+// save result to db
+router.post('/mbti/save-result', saveMBTIResult);
 
 export default router;
+
