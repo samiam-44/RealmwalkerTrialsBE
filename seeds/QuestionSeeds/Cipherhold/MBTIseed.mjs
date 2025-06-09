@@ -1,4 +1,4 @@
-//QUESTIONS FOR CipherholdREAlM
+
 import mongoose from 'mongoose';
 import Question from '../../models/Question.mjs';
 import Quiz from '../../models/Quiz.mjs';
@@ -6,9 +6,8 @@ import connectDB from '../../db/conn.mjs';
 
 
 const MBTIQuestions = [
-  //MEYER BRIGGS TEST
   {
-    quizTitle: "Myers-Briggs Codex (MBTI)",
+    title: "Myers-Briggs Codex",
     text: "You find it takes effort to introduce yourself to other people.",
     options: [
       { text: "Agree", value: "I" },
@@ -16,7 +15,7 @@ const MBTIQuestions = [
     ]
   },
   {
-    quizTitle: "Myers-Briggs Codex (MBTI)",
+    title: "Myers-Briggs Codex",
     text: "You consider yourself more practical than creative.",
     options: [
       { text: "Agree", value: "S" },
@@ -24,7 +23,7 @@ const MBTIQuestions = [
     ]
   },
   {
-    quizTitle: "Myers-Briggs Codex (MBTI)",
+    title: "Myers-Briggs Codex",
     text: "Winning a debate matters less to you than making sure no one gets upset.",
     options: [
       { text: "Agree", value: "F" },
@@ -32,7 +31,7 @@ const MBTIQuestions = [
     ]
   },
   {
-    quizTitle: "Myers-Briggs Codex (MBTI)",
+    title: "Myers-Briggs Codex",
     text: "You get energized going to social events that involve many interactions.",
     options: [
       { text: "Agree", value: "E" },
@@ -40,7 +39,7 @@ const MBTIQuestions = [
     ]
   },
   {
-    quizTitle: "Myers-Briggs Codex (MBTI)",
+    title: "Myers-Briggs Codex",
     text: "You often spend time exploring unrealistic and impractical ideas, yet intriguing ones.",
     options: [
       { text: "Agree", value: "N" },
@@ -48,7 +47,7 @@ const MBTIQuestions = [
     ]
   },
   {
-    quizTitle: "Myers-Briggs Codex (MBTI)",
+    title: "Myers-Briggs Codex",
     text: "Your travel plans are more likely to look like a rough list of ideas than a detailed itinerary.",
     options: [
       { text: "Agree", value: "P" },
@@ -56,7 +55,7 @@ const MBTIQuestions = [
     ]
   },
   {
-    quizTitle: "Myers-Briggs Codex (MBTI)",
+    title: "Myers-Briggs Codex",
     text: "You often think about what you should have said in a conversation long after it has taken place.",
     options: [
       { text: "Agree", value: "I" },
@@ -64,7 +63,7 @@ const MBTIQuestions = [
     ]
   },
   {
-    quizTitle: "Myers-Briggs Codex (MBTI)",
+    title: "Myers-Briggs Codex",
     text: "If your friend is sad about something, your first instinct is to support them emotionally, not try to solve their problem.",
     options: [
       { text: "Agree", value: "F" },
@@ -72,7 +71,7 @@ const MBTIQuestions = [
     ]
   },
   {
-    quizTitle: "Myers-Briggs Codex (MBTI)",
+    title: "Myers-Briggs Codex",
     text: "You rarely second-guess the choices that you’ve made.",
     options: [
       { text: "Agree", value: "J" },
@@ -80,7 +79,7 @@ const MBTIQuestions = [
     ]
   },
   {
-    quizTitle: "Myers-Briggs Codex (MBTI)",
+    title: "Myers-Briggs Codex",
     text: "You find it easy to empathize with a person whose experiences are very different from yours.",
     options: [
       { text: "Agree", value: "F" },
@@ -88,7 +87,7 @@ const MBTIQuestions = [
     ]
   },
   {
-    quizTitle: "Myers-Briggs Codex (MBTI)",
+    title: "Myers-Briggs Codex",
     text: "You prefer to completely finish one project before starting another.",
     options: [
       { text: "Agree", value: "J" },
@@ -96,7 +95,7 @@ const MBTIQuestions = [
     ]
   },
   {
-    quizTitle: "Myers-Briggs Codex (MBTI)",
+    title: "Myers-Briggs Codex",
     text: "You are more inclined to follow your head than your heart.",
     options: [
       { text: "Agree", value: "T" },
@@ -104,7 +103,7 @@ const MBTIQuestions = [
     ]
   },
   {
-    quizTitle: "Myers-Briggs Codex (MBTI)",
+    title: "Myers-Briggs Codex",
     text: "You usually prefer just doing what you feel like at any given moment instead of planning a particular daily routine.",
     options: [
       { text: "Agree", value: "P" },
@@ -112,7 +111,7 @@ const MBTIQuestions = [
     ]
   },
   {
-    quizTitle: "Myers-Briggs Codex (MBTI)",
+    title: "Myers-Briggs Codex",
     text: "You enjoy participating in group activities.",
     options: [
       { text: "Agree", value: "E" },
@@ -120,7 +119,7 @@ const MBTIQuestions = [
     ]
   },
   {
-    quizTitle: "Myers-Briggs Codex (MBTI)",
+    title: "Myers-Briggs Codex",
     text: "You like books and movies that make you come up with your own interpretation of the ending.",
     options: [
       { text: "Agree", value: "N" },
@@ -128,14 +127,15 @@ const MBTIQuestions = [
     ]
   },
   {
-    quizTitle: "Myers-Briggs Codex (MBTI)",
+    title: "Myers-Briggs Codex",
     text: "You trust experience more than theoretical concepts.",
     options: [
       { text: "Agree", value: "S" },
       { text: "Disagree", value: "N" }
     ]
   }
-]
+];
+
 
 // Main function to seed MBTI questions
 const seedMBTIQuestions = async () => {
@@ -146,11 +146,11 @@ const seedMBTIQuestions = async () => {
     // Loop through each MBTI question
     for (const q of MBTIQuestions) {
       // Find the quiz document that this question belongs to
-      const quiz = await Quiz.findOne({ title: q.quizTitle });
+      const quiz = await Quiz.findOne({ title: q.title });
 
       // Skip this question if the quiz isn't found in the database
       if (!quiz) {
-        console.warn(`Quiz not found: ${q.quizTitle}`);
+        console.warn(`Quiz not found: ${q.title}`);
         continue;
       }
 

@@ -5,7 +5,7 @@ import { calculateEnneagramScore } from '../../../logic/CipherholdLogic/Enneagra
 // Get Enneagram questions
 export const getEnneagramQuestions = async (req, res) => {
   try {
-    const questions = await Question.find({ quizTitle: "Enneagram Sigils" });
+    const questions = await Question.find({ Title: "Enneagram Sigils" });
     res.json(questions);
   } catch (error) {
     res.status(500).json({ error: "Failed to fetch Enneagram questions." });
@@ -27,7 +27,7 @@ export const calculateEnneagramResult = async (req, res) => {
     res.json({
       scores,
       type: fullResult.type,
-      name: fullResult.name,
+      title: fullResult.title,
       description: fullResult.description,
       coreMotivation: fullResult.coreMotivation,
       coreFear: fullResult.coreFear,

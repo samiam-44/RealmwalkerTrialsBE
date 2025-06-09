@@ -10,7 +10,7 @@ const quizData = [
 //CIPHERHOLD QUIZZES
   {
     realmName: 'Cipherhold',
-    title: 'Myers-Briggs Codex (MBTI)',
+    title: 'Myers-Briggs Codex',
     description: `Within the crystalline databanks of Cipherhold lies the Codex of Sixteen Paths — an arcane schema used by the AI Oracles to classify the essence of one’s cognition. Based on the Myers-Briggs Type Indicator, this ancient mapping deciphers your innate ways of perceiving the world and making decisions. Are you a silent strategist, a wandering idealist, or a commanding visionary? Uncover your type and let the cipher align your journey.`,
   },
   {

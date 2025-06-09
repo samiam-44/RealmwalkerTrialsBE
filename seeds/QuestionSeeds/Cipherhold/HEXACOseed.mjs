@@ -5,7 +5,7 @@ import connectDB from '../../db/conn.mjs';
 
 const HEXACOQuestions = [
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Agreeableness",
         facet: "Forgiveness",
         text: "I am generally patient and tolerant of others.",
@@ -19,7 +19,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Agreeableness",
         facet: "Forgiveness",
         text: "I tend to hold grudges and remember offenses for a long time.",
@@ -33,7 +33,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Honesty-Humility",
         facet: "Fairness",
         text: "I enjoy helping others and try to be kind whenever I can.",
@@ -47,7 +47,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Honesty-Humility",
         facet: "Fairness",
         text: "I sometimes lie or cheat if it benefits me.",
@@ -61,7 +61,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Openness to Experience",
         facet: "Aesthetic Appreciation",
         text: "I enjoy exploring new ideas and experiences.",
@@ -75,7 +75,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Openness to Experience",
         facet: "Conventionality",
         text: "I prefer practical, straightforward tasks to creative or abstract ones.",
@@ -89,7 +89,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Conscientiousness",
         facet: "Organization",
         text: "I am often disorganized and forgetful.",
@@ -103,7 +103,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Emotionality",
         facet: "Anxiety",
         text: "I usually remain calm and composed, even under stress.",
@@ -117,7 +117,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Agreeableness",
         facet: "Gentleness",
         text: "I tend to be critical of others and point out their faults.",
@@ -131,7 +131,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Extraversion",
         facet: "Social Self-Esteem",
         text: "I enjoy spending time with a wide variety of people.",
@@ -145,7 +145,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Extraversion",
         facet: "Social Self-Esteem",
         text: "I tend to be quite reserved and shy around strangers.",
@@ -159,7 +159,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Extraversion",
         facet: "Social Self-Esteem",
         text: "I am usually quite sociable and outgoing.",
@@ -173,7 +173,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Emotionality",
         facet: "Anxiety",
         text: "I often feel anxious or worried about things.",
@@ -187,7 +187,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Emotionality",
         facet: "Emotional Stability",
         text: "I am usually calm and relaxed, even in tense situations.",
@@ -201,7 +201,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Honesty-Humility",
         facet: "Fairness",
         text: "I try to be fair and honest in my dealings with others.",
@@ -215,7 +215,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Honesty-Humility",
         facet: "Manipulativeness",
         text: "I sometimes manipulate others to get my way.",
@@ -229,7 +229,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Openness to Experience",
         facet: "Inquisitiveness",
         text: "I am often interested in new and unusual ideas.",
@@ -243,7 +243,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Openness to Experience",
         facet: "Practicality",
         text: "I rarely daydream or get lost in my thoughts.",
@@ -257,7 +257,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Conscientiousness",
         facet: "Organization",
         text: "I tend to be quite organized and careful.",
@@ -271,7 +271,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Conscientiousness",
         facet: "Impulsiveness",
         text: "I often act on impulse rather than planning ahead.",
@@ -285,7 +285,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Extraversion",
         facet: "Social Boldness",
         text: "I feel comfortable around people.",
@@ -299,7 +299,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Extraversion",
         facet: "Social Boldness",
         text: "I avoid large social gatherings.",
@@ -313,7 +313,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Emotionality",
         facet: "Fearfulness",
         text: "I sometimes feel fearful for no apparent reason.",
@@ -327,7 +327,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Emotionality",
         facet: "Fearlessness",
         text: "I am generally not easily scared.",
@@ -341,7 +341,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Honesty-Humility",
         facet: "Sincerity",
         text: "I usually tell the truth even when it is difficult.",
@@ -355,7 +355,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Honesty-Humility",
         facet: "Sincerity",
         text: "I sometimes tell white lies to avoid hurting others.",
@@ -369,7 +369,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Openness to Experience",
         facet: "Aesthetic Appreciation",
         text: "I enjoy thinking about abstract ideas.",
@@ -383,7 +383,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Openness to Experience",
         facet: "Aesthetic Appreciation",
         text: "I do not like poetry or literature.",
@@ -396,8 +396,9 @@ const HEXACOQuestions = [
             { text: "Strongly Agree", value: 1 }
         ]
     },
+
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Conscientiousness",
         facet: "Perfectionism",
         text: "I strive to be perfect in everything I do.",
@@ -411,7 +412,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Conscientiousness",
         facet: "Perfectionism",
         text: "I am satisfied with doing a job half-heartedly.",
@@ -425,7 +426,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Agreeableness",
         facet: "Forgivingness",
         text: "I am quick to forgive those who have wronged me.",
@@ -439,7 +440,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Agreeableness",
         facet: "Forgivingness",
         text: "I tend to hold grudges against people who have hurt me.",
@@ -453,7 +454,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Emotionality",
         facet: "Sentimentality",
         text: "I often feel sentimental about people and things.",
@@ -467,7 +468,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Emotionality",
         facet: "Sentimentality",
         text: "I rarely get sentimental about anything.",
@@ -481,7 +482,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Honesty-Humility",
         facet: "Greed Avoidance",
         text: "I am not interested in possessing expensive things.",
@@ -495,7 +496,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Honesty-Humility",
         facet: "Greed Avoidance",
         text: "I want to own lots of expensive things.",
@@ -509,7 +510,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Openness to Experience",
         facet: "Inquisitiveness",
         text: "I like to explore new ideas and concepts.",
@@ -523,7 +524,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Openness to Experience",
         facet: "Inquisitiveness",
         text: "I prefer to stick to what I already know.",
@@ -537,7 +538,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Conscientiousness",
         facet: "Organization",
         text: "I like to keep my things tidy and organized.",
@@ -551,7 +552,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Conscientiousness",
         facet: "Organization",
         text: "I often leave my things messy and disorganized.",
@@ -565,7 +566,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Emotionality",
         facet: "Fearfulness",
         text: "I am easily frightened or scared.",
@@ -579,7 +580,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Emotionality",
         facet: "Fearfulness",
         text: "I am usually brave and unafraid of dangerous situations.",
@@ -593,7 +594,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Agreeableness",
         facet: "Gentleness",
         text: "I am gentle and tender when dealing with others.",
@@ -607,7 +608,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Agreeableness",
         facet: "Gentleness",
         text: "I can be harsh or blunt when interacting with others.",
@@ -621,7 +622,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Honesty-Humility",
         facet: "Sincerity",
         text: "I try to be sincere and genuine in my interactions.",
@@ -635,7 +636,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Honesty-Humility",
         facet: "Sincerity",
         text: "I sometimes say things I don’t really mean to impress others.",
@@ -649,7 +650,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Openness to Experience",
         facet: "Creativity",
         text: "I enjoy creating new and original ideas.",
@@ -663,7 +664,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Openness to Experience",
         facet: "Creativity",
         text: "I rarely think about new or original ideas.",
@@ -677,7 +678,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Conscientiousness",
         facet: "Diligence",
         text: "I work hard and put a lot of effort into what I do.",
@@ -691,7 +692,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Conscientiousness",
         facet: "Diligence",
         text: "I often avoid tasks that require a lot of effort.",
@@ -705,7 +706,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Extraversion",
         facet: "Sociability",
         text: "I enjoy being the center of attention.",
@@ -719,7 +720,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Extraversion",
         facet: "Sociability",
         text: "I tend to avoid social gatherings.",
@@ -733,7 +734,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Agreeableness",
         facet: "Patience",
         text: "I am patient even with annoying people.",
@@ -747,7 +748,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Agreeableness",
         facet: "Patience",
         text: "I often get irritated easily.",
@@ -761,7 +762,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Honesty-Humility",
         facet: "Fairness",
         text: "I always try to be fair to others, even when it’s difficult.",
@@ -775,7 +776,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Honesty-Humility",
         facet: "Fairness",
         text: "I sometimes cheat to get ahead.",
@@ -789,7 +790,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Openness to Experience",
         facet: "Aesthetic Appreciation",
         text: "I appreciate art and beauty in my surroundings.",
@@ -803,7 +804,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Openness to Experience",
         facet: "Aesthetic Appreciation",
         text: "I rarely notice or enjoy art and beauty.",
@@ -817,7 +818,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Conscientiousness",
         facet: "Perfectionism",
         text: "I like to do things perfectly and avoid mistakes.",
@@ -831,7 +832,7 @@ const HEXACOQuestions = [
         ]
     },
     {
-        quizTitle: "HEXACO Mirror Grid",
+        title: "HEXACO Mirror Grid",
         trait: "Conscientiousness",
         facet: "Perfectionism",
         text: "I often settle for ‘good enough’ rather than perfect.",
@@ -855,16 +856,16 @@ const seedHEXACOQuestions = async () => {
         // Iterate through all HEXACO questions
         for (const q of HEXACOQuestions) {
             // Find the quiz document by title
-            const quiz = await Quiz.findOne({ title: q.quizTitle });
+            const quiz = await Quiz.findOne({ title: q.title });
 
             // Warn and skip if quiz is not found
             if (!quiz) {
-                console.warn(`Quiz not found: ${q.quizTitle}`);
+                console.warn(`Quiz not found: ${q.title}`);
                 continue;
             }
 
             // Destructure quizTitle off the question object before saving
-            const { quizTitle, ...questionData } = q;
+            const { title, ...questionData } = q;
 
             // Create a new Question document with additional HEXACO fields
             const newQuestion = new Question({

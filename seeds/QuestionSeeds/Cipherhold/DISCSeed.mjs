@@ -1,11 +1,11 @@
-  import mongoose from 'mongoose';
+import mongoose from 'mongoose';
 import Question from '../../models/Question.mjs';
 import Quiz from '../../models/Quiz.mjs';
 import connectDB from '../../db/conn.mjs';
 
 const DISCQuestions = [
   {
-    quizTitle: "DISC Signal Frequencies",
+    title: "DISC Signal Frequencies",
     text: "I am most satisfied when:",
     options: [
       { text: "I achieve big goals", type: "D" },
@@ -15,7 +15,7 @@ const DISCQuestions = [
     ]
   },
   {
-    quizTitle: "DISC Signal Frequencies",
+    title: "DISC Signal Frequencies",
     text: "When working in a team, I usually:",
     options: [
       { text: "Take charge and set the direction", type: "D" },
@@ -25,7 +25,7 @@ const DISCQuestions = [
     ]
   },
   {
-    quizTitle: "DISC Signal Frequencies",
+    title: "DISC Signal Frequencies",
     text: "I tend to make decisions based on:",
     options: [
       { text: "What will get results fastest", type: "D" },
@@ -35,7 +35,7 @@ const DISCQuestions = [
     ]
   },
   {
-    quizTitle: "DISC Signal Frequencies",
+    title: "DISC Signal Frequencies",
     text: "In stressful situations, I usually:",
     options: [
       { text: "Push harder to overcome challenges", type: "D" },
@@ -45,7 +45,7 @@ const DISCQuestions = [
     ]
   },
   {
-    quizTitle: "DISC Signal Frequencies",
+    title: "DISC Signal Frequencies",
     text: "I am most energized when:",
     options: [
       { text: "I am leading and making quick decisions", type: "D" },
@@ -55,7 +55,7 @@ const DISCQuestions = [
     ]
   },
   {
-    quizTitle: "DISC Signal Frequencies",
+    title: "DISC Signal Frequencies",
     text: "When approaching new tasks, I prefer to:",
     options: [
       { text: "Jump right in and take control", type: "D" },
@@ -65,7 +65,7 @@ const DISCQuestions = [
     ]
   },
   {
-    quizTitle: "DISC Signal Frequencies",
+    title: "DISC Signal Frequencies",
     text: "Others describe me as:",
     options: [
       { text: "Assertive and determined", type: "D" },
@@ -75,7 +75,7 @@ const DISCQuestions = [
     ]
   },
   {
-    quizTitle: "DISC Signal Frequencies",
+    title: "DISC Signal Frequencies",
     text: "I handle conflict by:",
     options: [
       { text: "Confronting the problem directly", type: "D" },
@@ -85,7 +85,7 @@ const DISCQuestions = [
     ]
   },
   {
-    quizTitle: "DISC Signal Frequencies",
+    title: "DISC Signal Frequencies",
     text: "I prefer to be recognized for:",
     options: [
       { text: "My leadership and results", type: "D" },
@@ -95,7 +95,7 @@ const DISCQuestions = [
     ]
   },
   {
-    quizTitle: "DISC Signal Frequencies",
+    title: "DISC Signal Frequencies",
     text: "When under pressure, I:",
     options: [
       { text: "Take quick action to regain control", type: "D" },
@@ -105,7 +105,7 @@ const DISCQuestions = [
     ]
   },
   {
-    quizTitle: "DISC Signal Frequencies",
+    title: "DISC Signal Frequencies",
     text: "My work style is best described as:",
     options: [
       { text: "Competitive and goal-oriented", type: "D" },
@@ -115,7 +115,7 @@ const DISCQuestions = [
     ]
   },
   {
-    quizTitle: "DISC Signal Frequencies",
+    title: "DISC Signal Frequencies",
     text: "When I want to influence others, I:",
     options: [
       { text: "Use logic and data", type: "C" },
@@ -125,7 +125,7 @@ const DISCQuestions = [
     ]
   },
   {
-    quizTitle: "DISC Signal Frequencies",
+    title: "DISC Signal Frequencies",
     text: "I get frustrated when:",
     options: [
       { text: "People waste time and avoid decisions", type: "D" },
@@ -135,7 +135,7 @@ const DISCQuestions = [
     ]
   },
   {
-    quizTitle: "DISC Signal Frequencies",
+    title: "DISC Signal Frequencies",
     text: "I prefer environments that are:",
     options: [
       { text: "Fast-paced and challenging", type: "D" },
@@ -145,7 +145,7 @@ const DISCQuestions = [
     ]
   },
   {
-    quizTitle: "DISC Signal Frequencies",
+    title: "DISC Signal Frequencies",
     text: "My communication style is:",
     options: [
       { text: "Direct and to the point", type: "D" },
@@ -155,7 +155,7 @@ const DISCQuestions = [
     ]
   },
   {
-    quizTitle: "DISC Signal Frequencies",
+    title: "DISC Signal Frequencies",
     text: "I am motivated by:",
     options: [
       { text: "Winning and success", type: "D" },
@@ -165,7 +165,7 @@ const DISCQuestions = [
     ]
   },
   {
-    quizTitle: "DISC Signal Frequencies",
+    title: "DISC Signal Frequencies",
     text: "I handle change by:",
     options: [
       { text: "Taking charge and adapting quickly", type: "D" },
@@ -175,7 +175,7 @@ const DISCQuestions = [
     ]
   },
   {
-    quizTitle: "DISC Signal Frequencies",
+    title: "DISC Signal Frequencies",
     text: "When I set goals, I:",
     options: [
       { text: "Set challenging targets and push hard", type: "D" },
@@ -185,7 +185,7 @@ const DISCQuestions = [
     ]
   },
   {
-    quizTitle: "DISC Signal Frequencies",
+    title: "DISC Signal Frequencies",
     text: "I prefer to be recognized for my:",
     options: [
       { text: "Leadership and drive", type: "D" },
@@ -195,7 +195,7 @@ const DISCQuestions = [
     ]
   },
   {
-    quizTitle: "DISC Signal Frequencies",
+    title: "DISC Signal Frequencies",
     text: "In a group, I am often the one who:",
     options: [
       { text: "Takes the lead and pushes results", type: "D" },
@@ -204,22 +204,22 @@ const DISCQuestions = [
       { text: "Provides structure and quality control", type: "C" }
     ]
   }
-]
-//Function for seeding 
+];
+
+// Function for seeding 
 const seedDISCQuestions = async () => {
   try {
     await connectDB();
 
     for (const q of DISCQuestions) {
-      const quiz = await Quiz.findOne({ title: q.quizTitle });
-
+      const quiz = await Quiz.findOne({ title: q.title });
 
       if (!quiz) {
-        console.warn(`Quiz not found: ${q.quizTitle}`);
+        console.warn(`Quiz not found: ${q.title}`);
         continue;
       }
 
-      const { quizTitle, ...questionData } = q;
+      const { title, ...questionData } = q;
 
       const newQuestion = new Question({
         ...questionData,
@@ -228,21 +228,19 @@ const seedDISCQuestions = async () => {
 
       const savedQuestion = await newQuestion.save();
 
-      // Ensure the quiz has a `questions` array and push the new question into it
       if (!quiz.questions) quiz.questions = [];
       quiz.questions.push(savedQuestion._id);
-      await quiz.save(); // Save the updated quiz with the new question
+      await quiz.save();
 
       console.log(`Added DISC question: "${q.text}"`);
     }
 
     console.log('All DISC questions seeded successfully.');
-    process.exit(0); // Exit on success
+    process.exit(0);
   } catch (error) {
     console.error('Error seeding DISC questions:', error);
-    process.exit(1); // Exit on error
+    process.exit(1);
   }
 };
-
 
 seedDISCQuestions();

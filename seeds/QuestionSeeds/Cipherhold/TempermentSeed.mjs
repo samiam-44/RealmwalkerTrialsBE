@@ -4,8 +4,8 @@ import Quiz from '../../models/Quiz.mjs';
 import connectDB from '../../db/conn.mjs';
 
 const TemperamentQuestions = [
- {
-    quizTitle: "Temperament Archives",
+  {
+    title: "Temperament Archives",
     text: "When faced with a new project, I usually:",
     options: [
       { text: "Get excited and rally others to join me", type: "Sanguine" },
@@ -15,7 +15,7 @@ const TemperamentQuestions = [
     ]
   },
   {
-    quizTitle: "Temperament Archives",
+    title: "Temperament Archives",
     text: "In social gatherings, I tend to:",
     options: [
       { text: "Be the center of attention and tell stories", type: "Sanguine" },
@@ -25,7 +25,7 @@ const TemperamentQuestions = [
     ]
   },
   {
-    quizTitle: "Temperament Archives",
+    title: "Temperament Archives",
     text: "When making decisions, I rely mostly on:",
     options: [
       { text: "My intuition and enthusiasm", type: "Sanguine" },
@@ -35,7 +35,7 @@ const TemperamentQuestions = [
     ]
   },
   {
-    quizTitle: "Temperament Archives",
+    title: "Temperament Archives",
     text: "I handle conflict by:",
     options: [
       { text: "Trying to lighten the mood and move on", type: "Sanguine" },
@@ -45,7 +45,7 @@ const TemperamentQuestions = [
     ]
   },
   {
-    quizTitle: "Temperament Archives",
+    title: "Temperament Archives",
     text: "My work style is best described as:",
     options: [
       { text: "Flexible and spontaneous", type: "Sanguine" },
@@ -55,7 +55,7 @@ const TemperamentQuestions = [
     ]
   },
   {
-    quizTitle: "Temperament Archives",
+    title: "Temperament Archives",
     text: "When stressed, I tend to:",
     options: [
       { text: "Seek social support and distraction", type: "Sanguine" },
@@ -65,7 +65,7 @@ const TemperamentQuestions = [
     ]
   },
   {
-    quizTitle: "Temperament Archives",
+    title: "Temperament Archives",
     text: "My communication style is:",
     options: [
       { text: "Warm and expressive", type: "Sanguine" },
@@ -75,7 +75,7 @@ const TemperamentQuestions = [
     ]
   },
   {
-    quizTitle: "Temperament Archives",
+    title: "Temperament Archives",
     text: "I am motivated most by:",
     options: [
       { text: "Fun and social connection", type: "Sanguine" },
@@ -85,7 +85,7 @@ const TemperamentQuestions = [
     ]
   },
   {
-    quizTitle: "Temperament Archives",
+    title: "Temperament Archives",
     text: "In a team, I usually:",
     options: [
       { text: "Bring energy and enthusiasm", type: "Sanguine" },
@@ -95,7 +95,7 @@ const TemperamentQuestions = [
     ]
   },
   {
-    quizTitle: "Temperament Archives",
+    title: "Temperament Archives",
     text: "I feel most comfortable when:",
     options: [
       { text: "Surrounded by friends and laughter", type: "Sanguine" },
@@ -105,7 +105,7 @@ const TemperamentQuestions = [
     ]
   },
   {
-    quizTitle: "Temperament Archives",
+    title: "Temperament Archives",
     text: "When learning new things, I prefer:",
     options: [
       { text: "Group discussions and interactive activities", type: "Sanguine" },
@@ -115,7 +115,7 @@ const TemperamentQuestions = [
     ]
   },
   {
-    quizTitle: "Temperament Archives",
+    title: "Temperament Archives",
     text: "My friends describe me as:",
     options: [
       { text: "Fun-loving and outgoing", type: "Sanguine" },
@@ -125,7 +125,7 @@ const TemperamentQuestions = [
     ]
   },
   {
-    quizTitle: "Temperament Archives",
+    title: "Temperament Archives",
     text: "When faced with criticism, I tend to:",
     options: [
       { text: "Brush it off quickly and move on", type: "Sanguine" },
@@ -135,7 +135,7 @@ const TemperamentQuestions = [
     ]
   },
   {
-    quizTitle: "Temperament Archives",
+    title: "Temperament Archives",
     text: "I recharge best by:",
     options: [
       { text: "Spending time with friends and having fun", type: "Sanguine" },
@@ -145,7 +145,7 @@ const TemperamentQuestions = [
     ]
   },
   {
-    quizTitle: "Temperament Archives",
+    title: "Temperament Archives",
     text: "My ideal work environment is:",
     options: [
       { text: "Dynamic and social", type: "Sanguine" },
@@ -155,7 +155,7 @@ const TemperamentQuestions = [
     ]
   },
   {
-    quizTitle: "Temperament Archives",
+    title: "Temperament Archives",
     text: "When solving problems, I tend to:",
     options: [
       { text: "Brainstorm with others and think creatively", type: "Sanguine" },
@@ -165,7 +165,7 @@ const TemperamentQuestions = [
     ]
   },
   {
-    quizTitle: "Temperament Archives",
+    title: "Temperament Archives",
     text: "I express my emotions by:",
     options: [
       { text: "Being lively and openly expressive", type: "Sanguine" },
@@ -175,7 +175,7 @@ const TemperamentQuestions = [
     ]
   },
   {
-    quizTitle: "Temperament Archives",
+    title: "Temperament Archives",
     text: "My main strength is:",
     options: [
       { text: "Making friends easily", type: "Sanguine" },
@@ -185,7 +185,7 @@ const TemperamentQuestions = [
     ]
   },
   {
-    quizTitle: "Temperament Archives",
+    title: "Temperament Archives",
     text: "When working under pressure, I:",
     options: [
       { text: "Stay energetic and optimistic", type: "Sanguine" },
@@ -195,7 +195,7 @@ const TemperamentQuestions = [
     ]
   },
   {
-    quizTitle: "Temperament Archives",
+    title: "Temperament Archives",
     text: "I feel happiest when:",
     options: [
       { text: "Surrounded by people and fun activities", type: "Sanguine" },
@@ -211,13 +211,13 @@ const seedTemperamentQuestions = async () => {
     await connectDB();
 
     for (const q of TemperamentQuestions) {
-      const quiz = await Quiz.findOne({ title: q.quizTitle });
+      const quiz = await Quiz.findOne({ title: q.title });
       if (!quiz) {
-        console.warn(`Quiz not found: ${q.quizTitle}`);
+        console.warn(`Quiz not found: ${q.title}`);
         continue;
       }
 
-      const { quizTitle, ...questionData } = q;
+      const { title, ...questionData } = q;
 
       const newQuestion = new Question({
         ...questionData,
@@ -242,3 +242,4 @@ const seedTemperamentQuestions = async () => {
 };
 
 seedTemperamentQuestions();
+
