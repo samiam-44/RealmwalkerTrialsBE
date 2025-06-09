@@ -21,8 +21,9 @@ connectDB()
 //REGISTER ROUTES
 app.use('/api/realms', realmRoutes);
 app.use('/api/quizzes', quizRoutes);
-app.use('/api/quizzes', enneagramRoutes);
-app.use('/api', mbtiRoutes);
+app.use('/api', enneagramRoutes);
+app.use('/api/tests/mbti', mbtiRoutes);
+
 
 // ROOT ROUTE
 app.get('/', (req, res) => {
