@@ -2,11 +2,7 @@ import Question from '../../../models/Question.mjs';
 import Description from '../../../models/Descriptions.mjs';
 import { calculateEnneagramScore } from '../../../logic/CipherholdLogic/Enneagram.mjs';
 
-// ------------------------------
-// GET /enneagram/questions
-// Fetch all Enneagram test questions to display on frontend
-// Filtering by "Title" field to only get relevant questions for Enneagram
-// ------------------------------
+// get all enneagram q's
 export const getEnneagramQuestions = async (req, res) => {
   try {
     const questions = await Question.find({ Title: "Enneagram Sigils" });
@@ -17,23 +13,16 @@ export const getEnneagramQuestions = async (req, res) => {
   }
 };
 
-// ------------------------------
-// POST /enneagram/submit
-// Accept user answers, calculate Enneagram scores and type,
-// then return full result description with detailed info
-// ------------------------------
+// submmit ansrs + get type + desc
 export const calculateEnneagramResult = async (req, res) => {
   try {
-    const answers = req.body.answers; // Expecting array of { questionId, selectedValue }
-
-    // Call the logic function that calculates scores and fetches full result
+    const answers = req.body.answers;
     const { scores, topTypes, fullResult } = await calculateEnneagramScore(answers);
 
     if (!fullResult) {
       return res.status(404).json({ error: "Enneagram type not found." });
     }
 
-    // Return a rich JSON response with all details for the frontend
     res.json({
       scores,
       type: fullResult.type,
@@ -54,10 +43,7 @@ export const calculateEnneagramResult = async (req, res) => {
   }
 };
 
-// ------------------------------
-// GET /enneagram/descriptions
-// Return all Enneagram personality descriptions (all 9 types)
-// ------------------------------
+// get all 9 type descs
 export const getAllEnneagramDescriptions = async (req, res) => {
   try {
     const descriptions = await Description.find({ Title: "Enneagram" });
@@ -68,16 +54,10 @@ export const getAllEnneagramDescriptions = async (req, res) => {
   }
 };
 
-// ------------------------------
-// GET /enneagram/results/:userId
-// OPTIONAL: If you store user test results, fetch previous results by userId
-
-// ------------------------------
+// get prev result by userId
 export const getUserEnneagramResults = async (req, res) => {
   try {
     const userId = req.params.userId;
-
-    //  replace 'UserResults' with  actual Mongoose model for saved results
     const userResults = await UserResults.find({ userId, testType: 'enneagram' });
 
     if (!userResults || userResults.length === 0) {
@@ -91,10 +71,7 @@ export const getUserEnneagramResults = async (req, res) => {
   }
 };
 
-// ------------------------------
-// POST /enneagram/save-result
-
-// ------------------------------
+// save new enneagram result
 export const saveEnneagramResult = async (req, res) => {
   try {
     const { userId, result } = req.body;
@@ -118,6 +95,3 @@ export const saveEnneagramResult = async (req, res) => {
     res.status(500).json({ error: "Failed to save Enneagram result." });
   }
 };
-
-
-
