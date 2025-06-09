@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'
-import MBTI from '../../../models/AnswerModels/CipherholdModels/MBTImodel.mjs';
 import connectDB from '../../../db/conn.mjs'
 import dotenv from 'dotenv'
+import Description from '../../../models/Descriptions.mjs';
 
 dotenv.config();
 await connectDB();
@@ -9,6 +9,7 @@ await connectDB();
 const typesMBTI = [
   //ANALYSISTS
   {
+    testName: 'Myers-Briggs Codex',
     type: "INTJ",
     title: "The Architect — Oracle of the Codex",
     description: {
@@ -42,6 +43,7 @@ const typesMBTI = [
     }
   },
   {
+    testName: 'Myers-Briggs Codex',
     type: "INTP",
     title: "The Logician — Mindsmith of the Infinite Vault",
     description: {
@@ -74,6 +76,7 @@ const typesMBTI = [
     }
   },
   {
+    testName: 'Myers-Briggs Codex',
     type: "ENTJ",
     title: "The Commander — Strategist of the High Spire",
     description: {
@@ -106,6 +109,7 @@ const typesMBTI = [
     }
   },
   {
+    testName: 'Myers-Briggs Codex',
     type: "ENTP",
     title: "The Debater — Alchemist of the Thought Arenas",
     description: {
@@ -137,6 +141,7 @@ const typesMBTI = [
     }
   },
   {
+    testName: 'Myers-Briggs Codex',
     type: "ISTP",
     title: "The Virtuoso — Tactician of the Gearworks",
     description: {
@@ -167,6 +172,7 @@ const typesMBTI = [
     }
   },
   {
+    testName: 'Myers-Briggs Codex',
     type: "ISFP",
     title: "The Adventurer — Artisan of the Living Canvas",
     description: {
@@ -197,6 +203,7 @@ const typesMBTI = [
     }
   },
   {
+    testName: 'Myers-Briggs Codex',
     type: "ESTP",
     title: "The Entrepreneur — Dynamo of the Present Moment",
     description: {
@@ -227,6 +234,7 @@ const typesMBTI = [
     }
   },
   {
+    testName: 'Myers-Briggs Codex',
     type: "ESFP",
     title: "The Entertainer — The Heart of the Moment",
     description: {
@@ -257,6 +265,7 @@ const typesMBTI = [
     }
   },
   {
+    testName: 'Myers-Briggs Codex',
     type: "ISTJ",
     title: "The Logistician — The Reliable Organizer",
     description: {
@@ -287,6 +296,7 @@ const typesMBTI = [
     }
   },
   {
+    testName: 'Myers-Briggs Codex',
     type: "ISFJ",
     title: "The Defender — The Loyal Protector",
     description: {
@@ -317,6 +327,7 @@ const typesMBTI = [
     }
   },
   {
+    testName: 'Myers-Briggs Codex',
     type: "ESTJ",
     title: "The Executive — The Orderly Leader",
     description: {
@@ -348,6 +359,7 @@ const typesMBTI = [
     }
   },
   {
+    testName: 'Myers-Briggs Codex',
     type: "ESFJ",
     title: "The Consul — The Caring Connector",
     description: {
@@ -380,6 +392,7 @@ const typesMBTI = [
   },
   //DIPLOMATS
   {
+    testName: 'Myers-Briggs Codex',
     type: "INFJ",
     title: "The Advocate — The Visionary Idealist",
     description: {
@@ -412,6 +425,7 @@ const typesMBTI = [
     }
   },
   {
+    testName: 'Myers-Briggs Codex',
     type: "INFP",
     title: "The Mediator — The Poetic Idealist",
     description: {
@@ -444,6 +458,7 @@ const typesMBTI = [
     }
   },
   {
+    testName: 'Myers-Briggs Codex',
     type: "ENFJ",
     title: "The Protagonist — The Inspiring Leader",
     description: {
@@ -476,6 +491,7 @@ const typesMBTI = [
     }
   },
   {
+    testName: 'Myers-Briggs Codex',
     type: "ENFP",
     title: "The Campaigner — The Enthusiastic Visionary",
     description: {
@@ -507,24 +523,15 @@ const typesMBTI = [
     }
   }
 ]
-
 async function seedMBTI() {
   try {
-    await connectDB();
-
-    for (const mbtiType of typesMBTI) {
-      await MBTI.findOneAndUpdate(
-        { type: mbtiType.type },   // Query by 'type'
-        mbtiType,                  // Update with full object
-        { upsert: true, new: true }
-      );
-    }
-
-    console.log('MBTI seed complete');
-  } catch (error) {
-    console.error('Error seeding MBTI:', error);
-  } finally {
-    await mongoose.disconnect();
+    await Description.deleteMany();
+    const created = await Description.insertMany(typesMBTI);
+    console.log("MBTI results seeded:", created.length);
+    process.exit();
+  } catch (err) {
+    console.error("Error seeding MBTI descriptions:", err);
+    process.exit(1);
   }
 }
 

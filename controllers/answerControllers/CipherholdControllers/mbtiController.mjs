@@ -1,4 +1,4 @@
-import MBTI from '../../../models/AnswerModels/CipherholdModels/MBTImodel.mjs';
+import Description from '../../../models/Descriptions.mjs';
 import { MBTIResult } from '../../../logic/CipherholdLogic/mbti.mjs';
 
 export async function calculateMBTIResult(req, res) {
@@ -6,13 +6,15 @@ export async function calculateMBTIResult(req, res) {
     const userAnswers = req.body.answers; // e.g., ['E', 'N', 'T', 'J']
     const type = MBTIResult(userAnswers);
 
-    const mbtiDoc = await MBTI.findOne({ type });
+    const mbtiDoc = await Description.findOne({ type });
+
 
     if (!mbtiDoc) {
       return res.status(404).json({ error: 'MBTI type not found' });
     }
 
     res.json({
+      testName: mbtiDoc.testName,
       type: mbtiDoc.type,
       title: mbtiDoc.title,
       description: mbtiDoc.description // full nested object returned

@@ -1,8 +1,8 @@
 
 import mongoose from 'mongoose';
-import Question from '../../models/Question.mjs';
-import Quiz from '../../models/Quiz.mjs';
-import connectDB from '../../db/conn.mjs';
+import Question from '../../../models/Question.mjs';
+import Quiz from '../../../models/Quiz.mjs';
+import connectDB from '../../../db/conn.mjs';
 
 
 const MBTIQuestions = [

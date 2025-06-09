@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import connectDB from '../../../db/conn.mjs';
-import EnneagramResult from '../../../models/AnswerModels/CipherholdModels/EnneagramModel.mjs';
+import Description from '../../../models/Descriptions.mjs';
 
 dotenv.config();
 await connectDB();
@@ -201,8 +201,8 @@ const enneagramTypes = [
 
 async function seedEnneagramResults() {
   try {
-    await EnneagramResult.deleteMany();
-    const created = await EnneagramResult.insertMany(enneagramTypes);
+    await Description.deleteMany();
+    const created = await Description.insertMany(enneagramTypes);
     console.log("Enneagram results seeded:", created.length);
     process.exit();
   } catch (err) {
