@@ -3,7 +3,6 @@ import Question from '../../../models/Question.mjs';
 import Quiz from '../../../models/Quiz.mjs';
 import connectDB from '../../../db/conn.mjs';
 
-
 const OCEANQuestions = [
 {
     title: "OCEAN Protocol",
@@ -327,50 +326,47 @@ const OCEANQuestions = [
 }
 ]
 
-// Main function to seed Enneagram questions
 const seedOCEANQuestions = async () => {
-    try {
-        // Connect to MongoDB database
-        await connectDB();
+  try {
+    await connectDB();
 
-        // Loop through each Enneagram question
-        for (const q of OCEANQuestions) {
-            // Find the quiz document that this question belongs to
-            const quiz = await Quiz.findOne({ title: q.Title });
+    // Check for existing quiz or create it
+    let quiz = await Quiz.findOne({ title: 'OCEAN Protocol' });
 
-            // Skip if quiz not found
-            if (!quiz) {
-                console.warn(`Quiz not found: ${q.Title}`);
-                continue;
-            }
-
-            // Remove quizTitle before creating question document
-            const { Title, ...questionData } = q;
-
-            // Create and save the question with reference to the quiz ID
-            const newQuestion = new Question({
-                ...questionData,
-                quiz: quiz._id,
-            });
-
-            const savedQuestion = await newQuestion.save();
-
-            // Add this question to the quiz's question list
-            if (!quiz.questions) quiz.questions = [];
-            quiz.questions.push(savedQuestion._id);
-
-            await quiz.save(); // Save the updated quiz document
-
-            console.log(`Added OCEAN question: "${q.text}"`);
-        }
-
-        console.log('All OCEAN questions seeded successfully.');
-        process.exit(0); // Exit successfully
-    } catch (error) {
-        console.error('Error seeding Enneagram questions:', error);
-        process.exit(1); // Exit with error
+    if (!quiz) {
+      quiz = new Quiz({
+        title: 'OCEAN Protocol',
+        description: 'OCEAN Personality Dimensions',
+        questions: [],
+      });
+      await quiz.save();
+      console.log('Created new quiz: OCEAN Protocol');
     }
+
+    // Loop through each OCEAN question
+    for (const q of OCEANQuestions) {
+      const { title, ...questionData } = q;
+
+      const newQuestion = new Question({
+        ...questionData,
+        quiz: quiz._id,
+      });
+
+      const savedQuestion = await newQuestion.save();
+
+      if (!quiz.questions) quiz.questions = [];
+      quiz.questions.push(savedQuestion._id);
+
+      console.log(`Added OCEAN question: "${q.text}"`);
+    }
+
+    await quiz.save(); // Save updated quiz with questions
+    console.log('All OCEAN questions seeded successfully.');
+    process.exit(0);
+  } catch (error) {
+    console.error('Error seeding OCEAN questions:', error);
+    process.exit(1);
+  }
 };
 
-// Run the seed function
 seedOCEANQuestions();
