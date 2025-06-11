@@ -1,34 +1,50 @@
 import mongoose from "mongoose";
 
-//Store one user's responses to a quiz
 const resultSchema = new mongoose.Schema({
-    user: {
-        type: mongoose.Schema.Types.ObjectId, //Get user by id
-        ref: 'User',
-        required: true,
-    },
-    quiz: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Quiz',
-        required: true,
-    },
-    answers: [{ //Each answer is linked to a question
-        question: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'Question',
-            required: true
-        },
-        selectedValue: String //possible option value like A or "Mind" etc.
-    }],
+  user: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+  },
 
-    outcome: { //Computed Result
-        type: String,
-        default: 'Pending'
-    }
-},
+  testType: {
+    type: String,
+    required: true,
+  },
+
+  answers: [
     {
-        timestamps: true //Add createdAt/updatedAt fields
-    });
+      question: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Question",
+      },
+      selectedValue: String, //  "E", "N", or a full answer
+    },
+  ],
 
-const Result = mongoose.model('Result', resultSchema);
-export default Result
+  result: {
+    type: mongoose.Schema.Types.Mixed, // Final outcome example intj or type 5
+    required: true,
+  },
+
+  description: {
+    title: String,
+    testName: String,
+    coreMotivation: String,
+    coreFear: String,
+    strengths: [String],
+    challenges: [String],
+    idealCareers: [String],
+    compatibility: [String],
+    growthPath: String,
+    text: String, // general description text if other fields aren't used
+  },
+
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
+});
+
+const Result = mongoose.model("Result", resultSchema);
+export default Result;
