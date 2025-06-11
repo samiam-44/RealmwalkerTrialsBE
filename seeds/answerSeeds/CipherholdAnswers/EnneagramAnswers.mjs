@@ -210,7 +210,6 @@ const enneagramTypes = [
 
 async function seedEnneagramResults() {
   try {
-    await Description.deleteMany();
     const created = await Description.insertMany(enneagramTypes);
     console.log("Enneagram descriptions seeded:", created.length);
     process.exit();
