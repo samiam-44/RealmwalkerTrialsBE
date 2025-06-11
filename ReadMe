@@ -1,29 +1,45 @@
 # The Realmwalker Trials - Backend
 
-This is the backend server for **The Realmwalker Trials**, a personality RPG app where users explore themed realms and complete quizzes to unlock a rich, personalized self-discovery experience.
+This is the backend server for **The Realmwalker Trials**, a personality-based RPG quiz app where users explore themed fantasy realms and complete quizzes for immersive self-discovery and psychological insight.
 
-| Section             | Details                                                                                     |
-|---------------------|---------------------------------------------------------------------------------------------|
-| **Features**        | - Express REST API for users, realms, quizzes, results                                      |
-|                     | - MongoDB with Mongoose schemas for data storage                                            |
-|                     | - User Authentication (register/login)                                                     |
-|                     | - Full CRUD for quiz results and user data                                                 |
-|                     | - Seed scripts to populate quiz questions and realms                                       |
-|                     | - Middleware for JSON parsing and error handling                                           |
-| **Project Structure**| - `models/`: Mongoose schemas (`User`, `Quiz`, `Realm`, `Result`)                         |
-|                     | - `routes/`: Express API route handlers                                                    |
-|                     | - `controllers/`: Business logic                                                           |
-|                     | - `db/conn.mjs`: MongoDB connection setup                                                  |
-|                     | - `seeds/`: Quiz and realm data seeds                                                      |
-|                     | - `middleware/`: Auth and error handling middleware                                        |
-|                     | - `server.mjs`: Express app entry point                                                    |
-| **API Endpoints**   | - `POST /api/users/register`: Register new user                                            |
-|                     | - `POST /api/users/login`: User login                                                     |
-|                     | - `GET /api/realms`: List all realms                                                       |
-|                     | - `GET /api/realms/:id`: Get realm details                                                 |
-|                     | - `POST /api/quizzes`: Submit quiz result                                                  |
-|                     | - `GET /api/quizzes/user/:userId`: Fetch user's quiz results                               |
-|                     | - `PUT /api/quizzes/:id`: Update quiz result                                               |
-|                     | - `DELETE /api/quizzes/:id`: Delete quiz result                                            |
-| **Technologies**    | Node.js, Express, MongoDB, Mongoose, JWT Authentication, ES Modules                        |
+---
 
+## What’s Implemented Now
+
+| Section               | Details                                                                                      |
+|-----------------------|----------------------------------------------------------------------------------------------|
+| **Features**          | - Express REST API for MBTI and Enneagram quiz systems                                       |
+|                       | - MongoDB with Mongoose schemas for quiz data and personality descriptions                   |
+|                       | - Logic and data flow separated into controllers, routes, and logic files                    |
+|                       | - Seed scripts to populate MBTI and Enneagram questions, descriptions, and answers           |
+|                       | - Middleware for JSON parsing and error handling                                             |
+| **Quiz Routes**       | Shared route structure for each test type (e.g., `/mbti`, `/enneagram`, `/ocean`)           |
+|                       | - `GET /<test>/questions` – fetch all questions for the quiz                                 |
+|                       | - `POST /<test>/submit` – calculate and return quiz result                                   |
+|                       | - `GET /<test>/descriptions` – get all personality type descriptions                         |
+|                       | - `GET /<test>/results/:id` – retrieve a saved quiz result by ID                             |
+|                       | - `POST /<test>/results` – save a quiz result to the database                                |
+| **Project Structure** | - `models/` – Mongoose schemas (`Question`, `Description`, `Result`, etc.)                   |
+|                       | - `routes/` – Express routers for MBTI, Enneagram, and future OCEAN                          |
+|                       | - `controllers/` – Handles logic for calculating and saving results                          |
+|                       | - `logic/` – Helper functions for scoring MBTI and Enneagram quizzes                         |
+|                       | - `seeds/` – Scripts to populate database with quiz data                                     |
+|                       | - `db/conn.mjs` – MongoDB connection setup                                                   |
+|                       | - `middleware/` – Error handling and JSON parser setup                                       |
+|                       | - `server.mjs` – Entry point for the Express app                                             |
+| **Tech Stack**        | Node.js, Express, MongoDB, Mongoose, ES Modules                                              |
+
+---
+
+## Planned Features & Additions
+
+| Feature                          | Description                                                                 |
+|----------------------------------|-----------------------------------------------------------------------------|
+| **User Authentication System**   | JWT-based registration/login and protected routes                          |
+| **User Profiles**                | Allow users to save, track, and view all past quiz results                 |
+| **Four Realms of Discovery**     | Expand quiz offerings by category (e.g., Cihperhold, Kael'Zorah, Dreamlink, Elderglen) |
+| **30–40 Quiz Expansions**        | Systematically add more tests across different themes and archetypes       |
+| **Astrology API (Tentative)**    | (Optional) Pull birth chart or zodiac data for insight-based quizzes       |
+| **Admin Tools / Dashboard**      | Internal dashboard to manage questions, results, and user stats            |
+
+---
