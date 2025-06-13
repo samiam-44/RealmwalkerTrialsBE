@@ -1,6 +1,7 @@
 import express from 'express';
 import {
   getAllRealms,
+  getRealmById,
   createRealm,
   updateRealm,
   deleteRealm,
@@ -10,6 +11,9 @@ const router = express.Router();
 
 // GET /api/realms - fetch all realms
 router.get('/', getAllRealms);
+
+//GET /api/realms/:id - fetch realm by id
+router.get('/:id', getRealmById);
 
 // POST /api/realms - create new realm
 router.post('/', createRealm);

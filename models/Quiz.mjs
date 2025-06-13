@@ -7,15 +7,15 @@ const quizSchema = new mongoose.Schema({
         required: true,
     },
     description: String,
-    realm: { //Quiz belongs in this realm
+    realmName: { //Quiz belongs in this realm
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Realm', //Refers to the realm model
         required: true,
     },
-    questions: [{ //Array of quiestion ObjectIds
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Question', //question model
-    }]
+    // questions: [{ //Array of quiestion ObjectIds
+    //     type: mongoose.Schema.Types.ObjectId,
+    //     ref: 'Question', //question model
+    
 });
 
 const Quiz = mongoose.model('Quiz', quizSchema);

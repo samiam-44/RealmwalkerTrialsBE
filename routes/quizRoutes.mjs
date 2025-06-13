@@ -2,6 +2,7 @@ import express from 'express';
 import {
   getAllQuizzes,
   getQuizById,
+  GetQuizByRealmId,
   createQuiz,
   updateQuiz,
   deleteQuiz,
@@ -12,6 +13,9 @@ router.get('/', getAllQuizzes);
 
 // GET /api/quizzes/:id - fetch quiz by ID
 router.get('/:id', getQuizById);
+
+// GET /api/quizzes/by-realm/:realmId -fetch quizzes by realms
+router.get('/by-realm/:realmId', GetQuizByRealmId);
 
 // POST /api/quizzes - create new quiz
 router.post('/', createQuiz);

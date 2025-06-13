@@ -27,6 +27,21 @@ export async function getQuizById(req, res, next) {
         next(err);
     }
 }
+/**
+ * 
+ * Get quizzes by realmID
+ * @route GET /api/quizzes/by-realm/:realmId
+ * */
+export async function GetQuizByRealmId(req, res, next) {
+  try {
+    const quizzes = await Quiz.find({ realm: req.params.realmId });
+    res.json(quizzes);
+  } catch (err) {
+    next(err);
+  }
+}
+
+
 
 /**
  * Create a new quiz
@@ -69,4 +84,3 @@ export async function deleteQuiz(req, res, next) {
         next(err);
     }
 }
-
